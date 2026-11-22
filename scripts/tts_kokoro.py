@@ -171,12 +171,23 @@ def main():
     story = json.load(open(path))
     v = story["voice"]
     k, sess = load()
-    bank = voice_style(k, v["voice"])
+    # cast: speaker -> {voice, speed, gain}; "narrator" uses the top-level voice
+    cast = {"narrator": {"voice": v["voice"], "speed": v.get("speed", 1.0), "gain": 1.0}}
+    for name, c in story.get("cast", {}).items():
+        if "voice" in c:
+            cast[name] = {"voice": c["voice"], "speed": c.get("speed", 1.0), "gain": c.get("gain", 1.0)}
+    banks = {name: voice_style(k, c["voice"]) for name, c in cast.items()}
     t = v.get("leadIn", 0.25)
     chunks, lines = [], []
     for ln in v["lines"]:
         t += ln.get("pauseBefore", 0.12)
-        audio, words = synth_line(k, sess, ln["text"], bank, v.get("speed", 1.0), v.get("lang", "en-us"), ln.get("say"))
+        who = ln.get("speaker", "narrator")
+        if who not in cast:
+            raise ValueError(f"speaker {who!r} has no voice in story['cast']")
+        c = cast[who]
+        audio, words = synth_line(k, sess, ln["text"], banks[who], ln.get("speed", c["speed"]),
+                                  v.get("lang", "en-us"), ln.get("say"))
+        audio = audio * c["gain"] * ln.get("gain", 1.0)
         dur = len(audio) / SR
         lines.append({**ln, "start": round(float(t), 3), "dur": round(float(dur), 3),
                       "words": [{"text": w, "start": round(float(t + a), 3), "end": round(float(t + b), 3)} for w, a, b in words]})
@@ -212,7 +223,7 @@ def main():
             if key in c:
                 c[key] = resolve(c[key], lines, total)
     out_json = re.sub(r"\.json$", ".resolved.json", path)
-    json.dump(story, open(out_json, "w"), indent=2)
+    json.dump(story, open(out_json, "w"), indent=2, ensure_ascii=False)
     print(f"voice -> {dst} ({t:.2f}s speech, {total}s total)")
     for ln in lines:
         print(f"  {ln['start']:6.2f}  {' '.join(f'{w['text']}@{w['start']:.2f}' for w in ln['words'])}")

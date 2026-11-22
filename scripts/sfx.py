@@ -120,6 +120,56 @@ def wind(dur=3.0):
     return x * gust * shape * 1.4
 
 
+def knock(dur=0.7):
+    """Knuckle on drywall: sharp transient, hollow body, short room tail."""
+    n = int(dur * SR)
+    t = np.arange(n) / SR
+    tr = lowpass(rng.standard_normal(n), 3000) * env(n, 0.0003, 0.006) * 0.9
+    body = (np.sin(2 * np.pi * 118 * t) * 0.9 + np.sin(2 * np.pi * 247 * t) * 0.4) * env(n, 0.001, 0.045)
+    room = lowpass(rng.standard_normal(n), 700) * env(n, 0.004, 0.16) * 0.25
+    return np.tanh((tr + body + room) * 1.8) * 0.85
+
+
+def drill(dur=1.4):
+    n = int(dur * SR)
+    t = np.arange(n) / SR
+    f = 210 + 25 * np.sin(2 * np.pi * 3 * t) + 40 * np.minimum(1, t * 3)
+    motor = (2 * ((np.cumsum(f) / SR) % 1) - 1) * 0.35
+    grind = highpass(lowpass(rng.standard_normal(n), 4500), 800) * (0.4 + 0.3 * np.sin(2 * np.pi * 11 * t) ** 2)
+    shape = np.minimum(1, t * 12) * np.minimum(1, (dur - t) * 8)
+    return (lowpass(motor, 2500) + grind * 0.5) * shape * 0.7
+
+
+def hiss(dur=1.5):
+    """Cold draft through a small hole."""
+    n = int(dur * SR)
+    t = np.linspace(0, 1, n)
+    x = highpass(rng.standard_normal(n), 2500) * (0.6 + 0.4 * np.sin(2 * np.pi * 1.7 * t * dur) ** 2)
+    return x * np.minimum(1, t * 5) * np.minimum(1, (1 - t) * 3) * 0.35
+
+
+def tape(dur=0.6):
+    """Tape measure pulled out: fast ratchet clicks."""
+    n = int(dur * SR)
+    out = np.zeros(n)
+    for i, at in enumerate(np.arange(0, dur - 0.05, 0.018)):
+        c = click(0.02) * (1 - at / dur) * 0.9
+        j = int(at * SR)
+        out[j : j + len(c)] += c[: n - j]
+    return out
+
+
+def bed_horror(dur, level):
+    """Two close low tones beating (41 vs 43.6 Hz), a thin high whine, breath noise."""
+    n = int(dur * SR)
+    t = np.arange(n) / SR
+    low = np.sin(2 * np.pi * 41 * t) + np.sin(2 * np.pi * 43.6 * t) + 0.4 * np.sin(2 * np.pi * 82 * t)
+    whine = np.sin(2 * np.pi * 1318 * t + 3 * np.sin(2 * np.pi * 0.2 * t)) * 0.025 * (0.5 + 0.5 * np.sin(2 * np.pi * 0.07 * t))
+    breath = lowpass(rng.standard_normal(n), 300) * 0.25 * (0.6 + 0.4 * np.sin(2 * np.pi * 0.11 * t))
+    fade = np.minimum(1, t / 1.5) * np.minimum(1, (dur - t) / 0.6)
+    return (low * 0.3 + whine + breath) * fade * level
+
+
 def bed(dur, level=0.22):
     """Dark tension drone: detuned low fifths + slow filtered noise + heartbeat."""
     n = int(dur * SR)
@@ -136,14 +186,16 @@ def bed(dur, level=0.22):
 
 
 GEN = {"impact": impact, "stamp": stamp, "whoosh": whoosh, "click": click,
-       "paper": paper, "riser": riser, "creak": creak, "tick": tick, "wind": wind}
+       "paper": paper, "riser": riser, "creak": creak, "tick": tick, "wind": wind,
+       "knock": knock, "drill": drill, "hiss": hiss, "tape": tape}
 
 
 def main():
     board = json.load(open(sys.argv[1]))
     dur = board["durationSeconds"]
     mix = np.zeros(int((dur + 2) * SR))
-    mix[: int(dur * SR)] += bed(dur, board.get("bedLevel", 0.22))
+    bed_fn = bed_horror if board.get("bed") == "horror" else bed
+    mix[: int(dur * SR)] += bed_fn(dur, board.get("bedLevel", 0.22))
     for cue in board["sfx"]:
         kind = cue["type"]
         times = [cue["at"]]

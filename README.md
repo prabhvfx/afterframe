@@ -31,6 +31,9 @@ espeak-ng, so nothing else to install.
    ```
    Writes `public/vo/*.wav` and `partN.resolved.json`. Use `"say"` on a line
    for pronunciation, with `/ipa/` for names.
+   Characters: list them in `"cast"` (`{"theo": {"voice": "am_puck"}}`) and set
+   `"speaker": "theo"` on their lines. Dialogue shows in speech bubbles, not
+   captions. Per-line `"speed"` and `"gain"` work too (whispers).
 3. Sound effects (synthesized, no samples):
    ```bash
    python3 scripts/sfx.py stories/citicorp/part1.resolved.json public/sfx/citicorp-p1.wav

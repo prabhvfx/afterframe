@@ -11,6 +11,7 @@ import { Slam } from "./beats/Slam";
 import { Checklist } from "./beats/Checklist";
 import { Stamp } from "./beats/Stamp";
 import { TowerHero, DocStamp, TowerStats, TowerBase, FootprintPlan } from "./beats/TowerBeats";
+import { ListingCount, CharacterCard, MeasureGap, KnockNight, DrillHole } from "./beats/HorrorBeats";
 import { TimelineScrubber, WindDiagram, CalcSheet, BigCounter, JointZoom, NextPart } from "./beats/EvidenceBeats";
 
 export type Beat = {
@@ -40,6 +41,7 @@ const REGISTRY: Record<string, React.FC<any>> = {
   KineticTitle, Blueprint, ArchivalCard, Slam, Checklist, Stamp,
   TowerHero, DocStamp, TowerStats, TowerBase, FootprintPlan,
   TimelineScrubber, WindDiagram, CalcSheet, BigCounter, JointZoom, NextPart,
+  ListingCount, CharacterCard, MeasureGap, KnockNight, DrillHole,
 };
 
 export const StoryVertical: React.FC<{ story: Story; sfxFile: string }> = ({ story, sfxFile }) => {

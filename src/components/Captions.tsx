@@ -4,7 +4,7 @@ import { T, SAFE } from "../theme";
 import { sp, SPRINGS } from "./anim";
 
 export type VoiceWord = { text: string; start: number; end: number };
-export type VoiceLine = { text: string; start: number; dur: number; emphasis?: boolean; words?: VoiceWord[] };
+export type VoiceLine = { text: string; start: number; dur: number; emphasis?: boolean; speaker?: string; words?: VoiceWord[] };
 type Word = { text: string; start: number; end: number; line: number };
 
 // Estimate word timings from line timings: TTS lines carry ~80ms lead-in and
@@ -13,7 +13,7 @@ type Word = { text: string; start: number; end: number; line: number };
 export const wordsFromLines = (lines: VoiceLine[]): Word[] => {
   const out: Word[] = [];
   lines.forEach((l, li) => {
-    if (l.emphasis) return; // emphasis words are animated as on-screen graphics instead
+    if (l.emphasis || l.speaker) return; // emphasis words and dialogue are shown as graphics instead
     if (l.words) {
       // exact timestamps from the TTS engine
       l.words.forEach((w) => out.push({ ...w, line: li }));
@@ -90,8 +90,8 @@ export const Captions: React.FC<{ lines: VoiceLine[]; y?: number; hl?: string[];
               textTransform: "uppercase",
               letterSpacing: -1,
               color: isHl ? T.yellow : T.text,
-              opacity: Math.min(1, p * 1.4),
-              scale: String(0.6 + 0.4 * p + (active ? 0.04 : 0)),
+              opacity: Math.min(1, p * 1.4) * (active ? 1 : 0.8),
+              scale: String(0.6 + 0.4 * Math.min(1, p)),
               translate: `0 ${(1 - p) * 40}px`,
               display: "inline-block",
               textShadow: "0 6px 0 rgba(0,0,0,0.55), 0 0 30px rgba(0,0,0,0.6)",
