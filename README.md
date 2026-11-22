@@ -57,4 +57,4 @@ espeak-ng, so nothing else to install.
 | `scripts/` | TTS, SFX synth, mastering, model download |
 | `public/` | generated voice and SFX audio |
 
-Finished renders go to GitHub Releases, not git.
+Approved final renders go in `renders/` (mastered MP4s only). Drafts stay in `out/`, which git ignores.
