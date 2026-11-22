@@ -20,7 +20,7 @@ import wave
 
 import numpy as np
 
-MODELS = os.environ.get("KOKORO_DIR", "/home/user/models")
+MODELS = os.environ.get("KOKORO_DIR", os.path.expanduser("~/models"))
 SR = 24000
 HOP = 600  # samples per duration unit
 PUNCT = set(".,!?;:—…\"'()")
@@ -54,8 +54,29 @@ def voice_style(k, spec):
     return bank
 
 
-def synth_line(k, sess, text, style_bank, speed, lang):
-    ph = k.tokenizer.phonemize(text, lang)
+IPA_WORD = re.compile(r"^/([^/]+)/([.,!?;:]*)$")
+
+
+def phonemize(k, text, lang):
+    """Phonemize text; a word written as /ipa/ is used verbatim (for names)."""
+    out, run = [], []
+    for w in text.split():
+        m = IPA_WORD.match(w)
+        if m:
+            if run:
+                out.append(k.tokenizer.phonemize(" ".join(run), lang))
+                run = []
+            out.append(m.group(1) + m.group(2))
+        else:
+            run.append(w)
+    if run:
+        out.append(k.tokenizer.phonemize(" ".join(run), lang))
+    return " ".join(p.strip() for p in out)
+
+
+def synth_line(k, sess, text, style_bank, speed, lang, say=None):
+    # `say` is a respelled version used only for pronunciation (same word count)
+    ph = phonemize(k, say or text, lang)
     # tokenize char by char so we keep a char -> token map (unknown chars drop)
     char_tok = [k.tokenizer.tokenize(c) for c in ph]
     toks = [t for ct in char_tok for t in ct]
@@ -91,6 +112,8 @@ def synth_line(k, sess, text, style_bank, speed, lang):
     if cur:
         pwords.append(cur)
     words = text.split()
+    if say and len(say.split()) != len(words):
+        raise ValueError(f"'say' must have the same word count as text: {text!r}")
     if len(pwords) == len(words):
         wt = [(w, p[0][0], p[-1][1]) for w, p in zip(words, pwords)]
     else:  # rare: phonemizer merged/split words. Fall back to proportional.
@@ -153,7 +176,7 @@ def main():
     chunks, lines = [], []
     for ln in v["lines"]:
         t += ln.get("pauseBefore", 0.12)
-        audio, words = synth_line(k, sess, ln["text"], bank, v.get("speed", 1.0), v.get("lang", "en-us"))
+        audio, words = synth_line(k, sess, ln["text"], bank, v.get("speed", 1.0), v.get("lang", "en-us"), ln.get("say"))
         dur = len(audio) / SR
         lines.append({**ln, "start": round(float(t), 3), "dur": round(float(dur), 3),
                       "words": [{"text": w, "start": round(float(t + a), 3), "end": round(float(t + b), 3)} for w, a, b in words]})

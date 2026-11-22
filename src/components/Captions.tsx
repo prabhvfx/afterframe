@@ -71,7 +71,7 @@ export const Captions: React.FC<{ lines: VoiceLine[]; y?: number; hl?: string[];
         display: "flex",
         flexWrap: "wrap",
         justifyContent: "center",
-        gap: "0 22px",
+        gap: "0 34px",
       }}
     >
       {g.map((w, i) => {
@@ -91,7 +91,7 @@ export const Captions: React.FC<{ lines: VoiceLine[]; y?: number; hl?: string[];
               letterSpacing: -1,
               color: isHl ? T.yellow : T.text,
               opacity: Math.min(1, p * 1.4),
-              scale: String(0.6 + 0.4 * p + (active ? 0.06 : 0)),
+              scale: String(0.6 + 0.4 * p + (active ? 0.04 : 0)),
               translate: `0 ${(1 - p) * 40}px`,
               display: "inline-block",
               textShadow: "0 6px 0 rgba(0,0,0,0.55), 0 0 30px rgba(0,0,0,0.6)",

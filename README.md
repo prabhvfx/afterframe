@@ -1,54 +1,60 @@
-# Remotion video
+# Afterframe
 
-<p align="center">
-  <a href="https://github.com/remotion-dev/logo">
-    <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://github.com/remotion-dev/logo/raw/main/animated-logo-banner-dark.apng">
-      <img alt="Animated Remotion Logo" src="https://github.com/remotion-dev/logo/raw/main/animated-logo-banner-light.gif">
-    </picture>
-  </a>
-</p>
+Code-driven motion-design storytelling. One JSON storyboard per episode drives
+voice, captions, visuals and sound. Everything is free and runs locally.
 
-Welcome to your Remotion project!
+## Setup (once)
 
-## Commands
-
-**Install Dependencies**
-
-```console
-npm i --loglevel=error
+```bash
+npm install
 ```
 
-**Start Preview**
-
-```console
-npm run dev
+```bash
+pip install -r requirements.txt
 ```
 
-**Render video**
-
-```console
-npx remotion render
+```bash
+scripts/fetch_models.sh
 ```
 
-**Upgrade Remotion**
+Needs Node 20+, Python 3.10+ and FFmpeg. Kokoro's phonemizer ships its own
+espeak-ng, so nothing else to install.
 
-```console
-npx remotion upgrade
-```
+## Make an episode
 
-## Docs
+1. Write `stories/<story>/partN.json`: voice lines, beats, SFX cues.
+   Times can be anchors: `L2` (line 2 start), `L2.end`, `L0.w3` (line 0,
+   word 3), `END`, each with an optional `+0.2` / `-0.1` offset.
+2. Voice and word timestamps (Kokoro-82M, offline):
+   ```bash
+   python3 scripts/tts_kokoro.py stories/citicorp/part1.json
+   ```
+   Writes `public/vo/*.wav` and `partN.resolved.json`. Use `"say"` on a line
+   for pronunciation, with `/ipa/` for names.
+3. Sound effects (synthesized, no samples):
+   ```bash
+   python3 scripts/sfx.py stories/citicorp/part1.resolved.json public/sfx/citicorp-p1.wav
+   ```
+4. Register the episode in `src/Root.tsx`, then preview:
+   ```bash
+   npx remotion studio
+   ```
+5. Render and master (-14 LUFS, -1.5 dBTP):
+   ```bash
+   npx remotion render src/index.ts CiticorpP1 out/citicorp-p1.mp4 --crf=16
+   ```
+   ```bash
+   scripts/master.sh out/citicorp-p1.mp4 out/citicorp-p1-master.mp4
+   ```
 
-Get started with Remotion by reading the [fundamentals page](https://www.remotion.dev/docs/the-fundamentals).
+## Layout
 
-## Help
+| Path | What |
+|---|---|
+| `stories/` | storyboards and production bibles |
+| `src/beats/` | visual beat components (`KineticTitle`, `TowerHero`, `TimelineScrubber`, `WindDiagram`, ...) |
+| `src/components/` | captions, PART badge, grain, shared tower, spring presets |
+| `scripts/` | TTS, SFX synth, mastering, model download |
+| `public/` | generated voice and SFX audio |
 
-We provide help on our [Discord server](https://discord.gg/6VzzNDwUwV).
-
-## Issues
-
-Found an issue with Remotion? [File an issue here](https://github.com/remotion-dev/remotion/issues/new).
-
-## License
-
-Note that for some entities a company license is needed. [Read the terms here](https://github.com/remotion-dev/remotion/blob/main/LICENSE.md).
+Finished renders go to GitHub Releases, not git.

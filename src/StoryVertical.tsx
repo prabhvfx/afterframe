@@ -10,6 +10,8 @@ import { ArchivalCard } from "./beats/ArchivalCard";
 import { Slam } from "./beats/Slam";
 import { Checklist } from "./beats/Checklist";
 import { Stamp } from "./beats/Stamp";
+import { TowerHero, DocStamp, TowerStats, TowerBase, FootprintPlan } from "./beats/TowerBeats";
+import { TimelineScrubber, WindDiagram, CalcSheet, BigCounter, JointZoom, NextPart } from "./beats/EvidenceBeats";
 
 export type Beat = {
   id: string;
@@ -34,7 +36,11 @@ export type Story = {
 
 // Storyboard component registry: JSON "component" name -> React component.
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-const REGISTRY: Record<string, React.FC<any>> = { KineticTitle, Blueprint, ArchivalCard, Slam, Checklist, Stamp };
+const REGISTRY: Record<string, React.FC<any>> = {
+  KineticTitle, Blueprint, ArchivalCard, Slam, Checklist, Stamp,
+  TowerHero, DocStamp, TowerStats, TowerBase, FootprintPlan,
+  TimelineScrubber, WindDiagram, CalcSheet, BigCounter, JointZoom, NextPart,
+};
 
 export const StoryVertical: React.FC<{ story: Story; sfxFile: string }> = ({ story, sfxFile }) => {
   const { fps } = useVideoConfig();
@@ -43,6 +49,7 @@ export const StoryVertical: React.FC<{ story: Story; sfxFile: string }> = ({ sto
     <AbsoluteFill style={{ background: T.bg }}>
       {story.beats.map((b) => {
         const C = REGISTRY[b.component];
+        if (!C) throw new Error(`Unknown component "${b.component}" in beat "${b.id}"`);
         const from = Math.round(b.start * fps);
         const len = Math.max(1, Math.round(b.end * fps) - from);
         return (

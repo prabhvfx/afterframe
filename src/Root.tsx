@@ -1,20 +1,28 @@
 import React from "react";
 import { Composition } from "remotion";
 import { StoryVertical, Story } from "./StoryVertical";
-import p1preview from "../stories/rosenhan/part1-preview.resolved.json";
+import rosenhanP1 from "../stories/rosenhan/part1-preview.resolved.json";
+import citicorpP1 from "../stories/citicorp/part1.resolved.json";
 
-const story = p1preview as unknown as Story;
+// One entry per rendered episode: [composition id, resolved storyboard, sfx file]
+const VERTICAL: [string, Story, string][] = [
+  ["RosenhanP1Preview", rosenhanP1 as unknown as Story, "sfx/part1-preview.wav"],
+  ["CiticorpP1", citicorpP1 as unknown as Story, "sfx/citicorp-p1.wav"],
+];
 
 export const RemotionRoot: React.FC = () => (
   <>
-    <Composition
-      id="RosenhanP1Preview"
-      component={StoryVertical}
-      fps={story.fps}
-      width={1080}
-      height={1920}
-      durationInFrames={Math.round(story.durationSeconds * story.fps)}
-      defaultProps={{ story, sfxFile: "sfx/part1-preview.wav" }}
-    />
+    {VERTICAL.map(([id, story, sfxFile]) => (
+      <Composition
+        key={id}
+        id={id}
+        component={StoryVertical}
+        fps={story.fps}
+        width={1080}
+        height={1920}
+        durationInFrames={Math.round(story.durationSeconds * story.fps)}
+        defaultProps={{ story, sfxFile }}
+      />
+    ))}
   </>
 );

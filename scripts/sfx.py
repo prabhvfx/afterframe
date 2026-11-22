@@ -94,6 +94,32 @@ def riser(dur=2.0):
     return (tone * 0.18 + noise * 0.35) * t ** 2.2
 
 
+def creak(dur=1.2):
+    """Groaning steel: slow pitch wobble through a resonant band plus grit."""
+    n = int(dur * SR)
+    t = np.arange(n) / SR
+    f = 70 + 25 * np.sin(2 * np.pi * 1.3 * t) + 12 * np.sin(2 * np.pi * 7 * t)
+    tone = np.sign(np.sin(2 * np.pi * np.cumsum(f) / SR)) * 0.5
+    grit = (rng.random(n) < 0.02) * rng.standard_normal(n)
+    x = lowpass(tone + grit, 900)
+    return x * np.sin(np.pi * np.linspace(0, 1, n)) ** 0.7 * 0.7
+
+
+def tick(dur=0.03):
+    n = int(dur * SR)
+    return np.sin(2 * np.pi * 3200 * np.arange(n) / SR) * env(n, 0.0002, 0.004) * 0.35
+
+
+def wind(dur=3.0):
+    n = int(dur * SR)
+    t = np.linspace(0, 1, n)
+    gust = 0.55 + 0.45 * np.sin(2 * np.pi * (0.7 * t * dur) + 1.3) ** 2
+    x = lowpass(rng.standard_normal(n), 250 + 900 * gust)
+    x = highpass(x, 120)
+    shape = np.minimum(1, t * 6) * np.minimum(1, (1 - t) * 4)
+    return x * gust * shape * 1.4
+
+
 def bed(dur, level=0.22):
     """Dark tension drone: detuned low fifths + slow filtered noise + heartbeat."""
     n = int(dur * SR)
@@ -110,7 +136,7 @@ def bed(dur, level=0.22):
 
 
 GEN = {"impact": impact, "stamp": stamp, "whoosh": whoosh, "click": click,
-       "paper": paper, "riser": riser}
+       "paper": paper, "riser": riser, "creak": creak, "tick": tick, "wind": wind}
 
 
 def main():

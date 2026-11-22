@@ -1,0 +1,382 @@
+{
+  "id": "citicorp-p1",
+  "title": "The 59-Story Secret",
+  "part": 1,
+  "totalParts": 4,
+  "format": "vertical",
+  "fps": 60,
+  "durationSeconds": "auto",
+  "bedLevel": 0.2,
+  "captionHighlights": [
+    "fell",
+    "nobody",
+    "stilts",
+    "church",
+    "corners",
+    "hundred",
+    "sixty",
+    "percent",
+    "holding"
+  ],
+  "voice": {
+    "engine": "kokoro-82m-onnx",
+    "voice": "am_michael:0.6,am_onyx:0.4",
+    "speed": 1.15,
+    "lang": "en-us",
+    "file": "vo/citicorp-p1.wav",
+    "leadIn": 0.2,
+    "tail": 1.6,
+    "lines": [
+      {
+        "text": "This skyscraper almost fell on New York."
+      },
+      {
+        "text": "And almost nobody knew.",
+        "pauseBefore": 0.2
+      },
+      {
+        "text": "Citicorp Center. Fifty-nine stories. Nine hundred and fifteen feet.",
+        "pauseBefore": 0.3
+      },
+      {
+        "text": "But look at the bottom.",
+        "pauseBefore": 0.2
+      },
+      {
+        "text": "It stands on four stilts, in the middle of each side.",
+        "pauseBefore": 0.15
+      },
+      {
+        "text": "A church held the corner, and its deal banned columns through the new church.",
+        "pauseBefore": 0.2
+      },
+      {
+        "text": "In 1978, a Princeton student, Diane Hartley, studied it for her thesis.",
+        "say": "In nineteen-seventy-eight, a Princeton student, Diane Hartley, studied it for her thesis.",
+        "pauseBefore": 0.3
+      },
+      {
+        "text": "Her questions about wind hitting the corners reached the engineer's office.",
+        "pauseBefore": 0.15
+      },
+      {
+        "text": "So the engineer, William LeMessurier, checked the math.",
+        "say": "So the engineer, William /ləmˈɛʒəɹiˌeɪ/, checked the math.",
+        "pauseBefore": 0.2
+      },
+      {
+        "text": "Corner winds pushed the load on key joints up a hundred and sixty percent.",
+        "pauseBefore": 0.2
+      },
+      {
+        "text": "Then he learned what was holding those joints together.",
+        "pauseBefore": 0.35
+      },
+      {
+        "text": "Part two is up.",
+        "pauseBefore": 0.3
+      }
+    ]
+  },
+  "beats": [
+    {
+      "id": "hero",
+      "start": 0,
+      "end": "L1-0.05",
+      "component": "TowerHero",
+      "noCaptions": true,
+      "props": {
+        "words": [
+          "THIS",
+          "SKYSCRAPER",
+          "ALMOST",
+          "FELL"
+        ],
+        "wordAt": [
+          "L0.w0",
+          "L0.w1",
+          "L0.w2",
+          "L0.w3"
+        ],
+        "tiltAt": "L0.w3"
+      }
+    },
+    {
+      "id": "secret",
+      "start": "L1-0.05",
+      "end": "L2-0.1",
+      "component": "DocStamp",
+      "props": {
+        "heading": "INTERNAL MEMO",
+        "lines": [
+          "RE: CITICORP CENTER",
+          "STATUS: ████████",
+          "DISTRIBUTION: ██"
+        ],
+        "stamp": "CONFIDENTIAL",
+        "stampAt": "L1.w2"
+      }
+    },
+    {
+      "id": "stats",
+      "start": "L2-0.1",
+      "end": "L3-0.05",
+      "component": "TowerStats",
+      "props": {
+        "name": "CITICORP CENTER",
+        "nameAt": "L2.w0",
+        "stats": [
+          {
+            "value": 59,
+            "label": "STORIES",
+            "at": "L2.w2"
+          },
+          {
+            "value": 915,
+            "label": "FEET",
+            "at": "L2.w4"
+          }
+        ]
+      }
+    },
+    {
+      "id": "base",
+      "start": "L3-0.05",
+      "end": "L4-0.05",
+      "component": "TowerBase",
+      "props": {}
+    },
+    {
+      "id": "plan",
+      "start": "L4-0.05",
+      "end": "L6-0.1",
+      "component": "FootprintPlan",
+      "props": {
+        "columnsAt": "L4.w3",
+        "churchAt": "L5.w1",
+        "banAt": "L5.w8"
+      }
+    },
+    {
+      "id": "timeline",
+      "start": "L6-0.1",
+      "end": "L7-0.05",
+      "component": "TimelineScrubber",
+      "props": {
+        "from": 1974,
+        "to": 1980,
+        "target": 1978,
+        "landAt": "L6.w1",
+        "cardAt": "L6.w5",
+        "card": {
+          "kicker": "PRINCETON · SENIOR THESIS",
+          "title": "Diane Hartley",
+          "sub": "Engineering student"
+        }
+      }
+    },
+    {
+      "id": "wind",
+      "start": "L7-0.05",
+      "end": "L8-0.05",
+      "component": "WindDiagram",
+      "props": {
+        "faceAt": "L7.w3",
+        "cornerAt": "L7.w6"
+      }
+    },
+    {
+      "id": "calc",
+      "start": "L8-0.05",
+      "end": "L9-0.05",
+      "component": "CalcSheet",
+      "props": {
+        "who": "W. J. LEMESSURIER",
+        "whoAt": "L8.w3",
+        "rows": [
+          "WIND ∠ 45° (QUARTERING)",
+          "TIER LOADS: RECHECK",
+          "JOINT FORCES: ?"
+        ]
+      }
+    },
+    {
+      "id": "counter",
+      "start": "L9-0.05",
+      "end": "L10-0.05",
+      "component": "BigCounter",
+      "props": {
+        "value": 160,
+        "suffix": "%",
+        "label": "LOAD ON KEY JOINTS",
+        "countAt": "L9.w10",
+        "countEnd": "L9.w13"
+      }
+    },
+    {
+      "id": "joint",
+      "start": "L10-0.05",
+      "end": "L11-0.1",
+      "component": "JointZoom",
+      "props": {
+        "revealAt": "L10.w5"
+      }
+    },
+    {
+      "id": "next",
+      "start": "L11-0.1",
+      "end": "END",
+      "component": "NextPart",
+      "props": {
+        "next": 2,
+        "line": "The bolts.",
+        "cta": "FULL STORY ON YOUTUBE"
+      },
+      "noCaptions": true
+    }
+  ],
+  "sfx": [
+    {
+      "type": "riser",
+      "at": 0.0,
+      "dur": 0.6,
+      "gain": 0.5
+    },
+    {
+      "type": "stamp",
+      "at": "L0.w0",
+      "gain": 0.45
+    },
+    {
+      "type": "stamp",
+      "at": "L0.w1",
+      "gain": 0.55
+    },
+    {
+      "type": "creak",
+      "at": "L0.w2",
+      "gain": 0.9
+    },
+    {
+      "type": "impact",
+      "at": "L0.w3",
+      "gain": 0.85
+    },
+    {
+      "type": "paper",
+      "at": "L1-0.15",
+      "gain": 0.9
+    },
+    {
+      "type": "stamp",
+      "at": "L1.w2",
+      "gain": 1.0
+    },
+    {
+      "type": "whoosh",
+      "at": "L2-0.3",
+      "gain": 0.7
+    },
+    {
+      "type": "tick",
+      "at": "L2.w2",
+      "every": 0.05,
+      "until": "L2.w2+0.6",
+      "gain": 0.5
+    },
+    {
+      "type": "tick",
+      "at": "L2.w4",
+      "every": 0.05,
+      "until": "L2.w4+0.8",
+      "gain": 0.5
+    },
+    {
+      "type": "whoosh",
+      "at": "L3-0.25",
+      "dur": 0.8,
+      "gain": 0.8
+    },
+    {
+      "type": "click",
+      "at": "L4.w3",
+      "every": 0.12,
+      "until": "L4.w3+0.5",
+      "gain": 0.9
+    },
+    {
+      "type": "stamp",
+      "at": "L5.w1",
+      "gain": 0.6
+    },
+    {
+      "type": "stamp",
+      "at": "L5.w8",
+      "gain": 0.9
+    },
+    {
+      "type": "whoosh",
+      "at": "L6-0.3",
+      "gain": 0.6
+    },
+    {
+      "type": "tick",
+      "at": "L6-0.1",
+      "every": 0.09,
+      "until": "L6.w1",
+      "gain": 0.6
+    },
+    {
+      "type": "paper",
+      "at": "L6.w5-0.1",
+      "gain": 0.8
+    },
+    {
+      "type": "wind",
+      "at": "L7-0.1",
+      "dur": 3.4,
+      "gain": 0.9
+    },
+    {
+      "type": "whoosh",
+      "at": "L7.w6-0.15",
+      "dur": 0.5,
+      "gain": 0.7
+    },
+    {
+      "type": "click",
+      "at": "L8+0.1",
+      "every": 0.06,
+      "until": "L8.end",
+      "gain": 0.55
+    },
+    {
+      "type": "tick",
+      "at": "L9.w10",
+      "every": 0.04,
+      "until": "L9.w13",
+      "gain": 0.55
+    },
+    {
+      "type": "impact",
+      "at": "L9.w13",
+      "gain": 0.7
+    },
+    {
+      "type": "creak",
+      "at": "L10+0.2",
+      "gain": 0.8
+    },
+    {
+      "type": "riser",
+      "at": "L10.w5",
+      "dur": 1.6,
+      "gain": 0.9
+    },
+    {
+      "type": "stamp",
+      "at": "L11",
+      "gain": 0.9
+    }
+  ]
+}
