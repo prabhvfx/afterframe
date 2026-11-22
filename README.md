@@ -61,3 +61,19 @@ espeak-ng, so nothing else to install.
 | `public/` | generated voice and SFX audio |
 
 Approved final renders go in `renders/` (mastered MP4s only). Drafts stay in `out/`, which git ignores.
+
+## Animation skills (vendored)
+
+`vendor/claude-animation-skills/` is a pinned copy of
+[artemnovitckii/claude-animation-skills](https://github.com/artemnovitckii/claude-animation-skills)
+(MIT, see `UPSTREAM` for the commit and local patches). Its 11 skills are linked
+into `.claude/skills/`, so Claude Code opened in this repo shows `/graph`,
+`/map-route`, `/kurzgesagt`, `/low-poly`, `/stick-figure`, `/zach-d-films` and the rest.
+
+One-time setup on a new machine:
+
+```bash
+bash vendor/claude-animation-skills/kit/setup.sh
+```
+
+Add `--voice` for `/stick-figure` and `/zach-d-films` (about 1 GB of local models).

@@ -1,0 +1,5 @@
+86f7010 https://github.com/artemnovitckii/claude-animation-skills (MIT)
+
+Local patches:
+- kit/anim.py: hyperframes() sets npm_config_onnxruntime_node_install_cuda=skip so npx
+  hyperframes installs on Linux (the CUDA binary download 404s and breaks the install).
