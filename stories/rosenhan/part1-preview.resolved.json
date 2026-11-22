@@ -1,0 +1,326 @@
+{
+  "id": "rosenhan-p1-preview",
+  "title": "The Fake Patients",
+  "part": 1,
+  "totalParts": 4,
+  "format": "vertical",
+  "fps": 60,
+  "durationSeconds": 11.51,
+  "bedLevel": 0.2,
+  "captionHighlights": [
+    "word",
+    "admitted",
+    "anyway"
+  ],
+  "voice": {
+    "engine": "kokoro-82m-onnx",
+    "voice": "am_michael:0.6,am_onyx:0.4",
+    "speed": 1.12,
+    "lang": "en-us",
+    "file": "vo/part1-preview.wav",
+    "leadIn": 0.2,
+    "lines": [
+      {
+        "text": "A psychologist walked into a mental hospital.",
+        "start": 0.32,
+        "dur": 3.225,
+        "words": [
+          {
+            "text": "A",
+            "start": 0.35,
+            "end": 0.4
+          },
+          {
+            "text": "psychologist",
+            "start": 0.45,
+            "end": 1.35
+          },
+          {
+            "text": "walked",
+            "start": 1.425,
+            "end": 1.725
+          },
+          {
+            "text": "into",
+            "start": 1.75,
+            "end": 1.95
+          },
+          {
+            "text": "a",
+            "start": 2.0,
+            "end": 2.05
+          },
+          {
+            "text": "mental",
+            "start": 2.125,
+            "end": 2.45
+          },
+          {
+            "text": "hospital.",
+            "start": 2.5,
+            "end": 3.425
+          }
+        ]
+      },
+      {
+        "text": "He said he heard one word.",
+        "pauseBefore": 0.15,
+        "start": 3.695,
+        "dur": 1.9,
+        "words": [
+          {
+            "text": "He",
+            "start": 3.725,
+            "end": 3.825
+          },
+          {
+            "text": "said",
+            "start": 3.875,
+            "end": 4.05
+          },
+          {
+            "text": "he",
+            "start": 4.075,
+            "end": 4.175
+          },
+          {
+            "text": "heard",
+            "start": 4.225,
+            "end": 4.45
+          },
+          {
+            "text": "one",
+            "start": 4.525,
+            "end": 4.725
+          },
+          {
+            "text": "word.",
+            "start": 4.775,
+            "end": 5.475
+          }
+        ]
+      },
+      {
+        "text": "Thud.",
+        "pauseBefore": 0.3,
+        "emphasis": true,
+        "start": 5.895,
+        "dur": 0.65,
+        "words": [
+          {
+            "text": "Thud.",
+            "start": 5.925,
+            "end": 6.425
+          }
+        ]
+      },
+      {
+        "text": "No other symptoms.",
+        "pauseBefore": 0.42,
+        "start": 6.965,
+        "dur": 1.6,
+        "words": [
+          {
+            "text": "No",
+            "start": 6.995,
+            "end": 7.245
+          },
+          {
+            "text": "other",
+            "start": 7.295,
+            "end": 7.495
+          },
+          {
+            "text": "symptoms.",
+            "start": 7.57,
+            "end": 8.445
+          }
+        ]
+      },
+      {
+        "text": "They admitted him anyway.",
+        "pauseBefore": 0.15,
+        "start": 8.715,
+        "dur": 1.8,
+        "words": [
+          {
+            "text": "They",
+            "start": 8.745,
+            "end": 8.87
+          },
+          {
+            "text": "admitted",
+            "start": 8.92,
+            "end": 9.27
+          },
+          {
+            "text": "him",
+            "start": 9.295,
+            "end": 9.495
+          },
+          {
+            "text": "anyway.",
+            "start": 9.57,
+            "end": 10.395
+          }
+        ]
+      }
+    ],
+    "tail": 1.0
+  },
+  "beats": [
+    {
+      "id": "title",
+      "start": 0,
+      "end": 1.345,
+      "component": "KineticTitle",
+      "props": {
+        "kicker": "A TRUE STORY",
+        "lines": [
+          "A",
+          "PSYCHOLOGIST"
+        ],
+        "lineAt": [
+          0.3,
+          0.4
+        ]
+      },
+      "noCaptions": true
+    },
+    {
+      "id": "hospital",
+      "start": 1.345,
+      "end": 3.645,
+      "component": "Blueprint",
+      "props": {
+        "label": "PSYCHIATRIC HOSPITAL",
+        "sub": "ADMISSIONS"
+      }
+    },
+    {
+      "id": "intake",
+      "start": 3.645,
+      "end": 5.875,
+      "component": "ArchivalCard",
+      "props": {
+        "heading": "PATIENT INTAKE",
+        "complaint": "Hears a voice. It says one word."
+      }
+    },
+    {
+      "id": "thud",
+      "start": 5.875,
+      "end": 6.915,
+      "component": "Slam",
+      "props": {
+        "word": "THUD."
+      },
+      "noCaptions": true
+    },
+    {
+      "id": "symptoms",
+      "start": 6.915,
+      "end": 8.665,
+      "component": "Checklist",
+      "props": {
+        "heading": "OTHER SYMPTOMS",
+        "items": [
+          "Hallucinations",
+          "Delusions",
+          "Mood disorder",
+          "Prior history"
+        ]
+      }
+    },
+    {
+      "id": "admitted",
+      "start": 8.665,
+      "end": 11.51,
+      "component": "Stamp",
+      "props": {
+        "word": "ADMITTED",
+        "stampAt": 8.92,
+        "teaser": "He wasn't the only one.",
+        "teaserAt": 10.565,
+        "heading": "PATIENT INTAKE",
+        "complaint": "Hears a voice. It says one word."
+      }
+    }
+  ],
+  "sfx": [
+    {
+      "type": "whoosh",
+      "at": 0.0,
+      "gain": 0.6
+    },
+    {
+      "type": "stamp",
+      "at": 0.32,
+      "gain": 0.5
+    },
+    {
+      "type": "stamp",
+      "at": 0.42,
+      "gain": 0.65
+    },
+    {
+      "type": "whoosh",
+      "at": 1.175,
+      "gain": 0.8
+    },
+    {
+      "type": "click",
+      "at": 1.525,
+      "every": 0.11,
+      "until": 3.195,
+      "gain": 0.3
+    },
+    {
+      "type": "paper",
+      "at": 3.545,
+      "gain": 1.0
+    },
+    {
+      "type": "click",
+      "at": 3.995,
+      "every": 0.065,
+      "until": 5.395,
+      "gain": 0.6
+    },
+    {
+      "type": "whoosh",
+      "at": 5.595,
+      "dur": 0.3,
+      "gain": 0.5
+    },
+    {
+      "type": "impact",
+      "at": 5.875,
+      "gain": 1.0
+    },
+    {
+      "type": "click",
+      "at": 7.015,
+      "every": 0.2,
+      "until": 8.565,
+      "gain": 0.9
+    },
+    {
+      "type": "whoosh",
+      "at": 8.435,
+      "dur": 0.3,
+      "gain": 0.5
+    },
+    {
+      "type": "stamp",
+      "at": 8.92,
+      "gain": 1.1
+    },
+    {
+      "type": "riser",
+      "at": 9.22,
+      "dur": 1.8,
+      "gain": 0.9
+    }
+  ]
+}

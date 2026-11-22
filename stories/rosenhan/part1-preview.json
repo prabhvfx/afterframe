@@ -1,0 +1,201 @@
+{
+  "id": "rosenhan-p1-preview",
+  "title": "The Fake Patients",
+  "part": 1,
+  "totalParts": 4,
+  "format": "vertical",
+  "fps": 60,
+  "durationSeconds": "auto",
+  "bedLevel": 0.2,
+  "captionHighlights": [
+    "word",
+    "admitted",
+    "anyway"
+  ],
+  "voice": {
+    "engine": "kokoro-82m-onnx",
+    "voice": "am_michael:0.6,am_onyx:0.4",
+    "speed": 1.12,
+    "lang": "en-us",
+    "file": "vo/part1-preview.wav",
+    "leadIn": 0.2,
+    "lines": [
+      {
+        "text": "A psychologist walked into a mental hospital."
+      },
+      {
+        "text": "He said he heard one word.",
+        "pauseBefore": 0.15
+      },
+      {
+        "text": "Thud.",
+        "pauseBefore": 0.3,
+        "emphasis": true
+      },
+      {
+        "text": "No other symptoms.",
+        "pauseBefore": 0.42
+      },
+      {
+        "text": "They admitted him anyway.",
+        "pauseBefore": 0.15
+      }
+    ],
+    "tail": 1.0
+  },
+  "beats": [
+    {
+      "id": "title",
+      "start": 0,
+      "end": "L0.w2-0.08",
+      "component": "KineticTitle",
+      "props": {
+        "kicker": "A TRUE STORY",
+        "lines": [
+          "A",
+          "PSYCHOLOGIST"
+        ],
+        "lineAt": [
+          "L0.w0-0.05",
+          "L0.w1-0.05"
+        ]
+      },
+      "noCaptions": true
+    },
+    {
+      "id": "hospital",
+      "start": "L0.w2-0.08",
+      "end": "L1-0.05",
+      "component": "Blueprint",
+      "props": {
+        "label": "PSYCHIATRIC HOSPITAL",
+        "sub": "ADMISSIONS"
+      }
+    },
+    {
+      "id": "intake",
+      "start": "L1-0.05",
+      "end": "L2-0.02",
+      "component": "ArchivalCard",
+      "props": {
+        "heading": "PATIENT INTAKE",
+        "complaint": "Hears a voice. It says one word."
+      }
+    },
+    {
+      "id": "thud",
+      "start": "L2-0.02",
+      "end": "L3-0.05",
+      "component": "Slam",
+      "props": {
+        "word": "THUD."
+      },
+      "noCaptions": true
+    },
+    {
+      "id": "symptoms",
+      "start": "L3-0.05",
+      "end": "L4-0.05",
+      "component": "Checklist",
+      "props": {
+        "heading": "OTHER SYMPTOMS",
+        "items": [
+          "Hallucinations",
+          "Delusions",
+          "Mood disorder",
+          "Prior history"
+        ]
+      }
+    },
+    {
+      "id": "admitted",
+      "start": "L4-0.05",
+      "end": "END",
+      "component": "Stamp",
+      "props": {
+        "word": "ADMITTED",
+        "stampAt": "L4.w1",
+        "teaser": "He wasn't the only one.",
+        "teaserAt": "L4.end+0.05",
+        "heading": "PATIENT INTAKE",
+        "complaint": "Hears a voice. It says one word."
+      }
+    }
+  ],
+  "sfx": [
+    {
+      "type": "whoosh",
+      "at": 0.0,
+      "gain": 0.6
+    },
+    {
+      "type": "stamp",
+      "at": "L0.w0-0.03",
+      "gain": 0.5
+    },
+    {
+      "type": "stamp",
+      "at": "L0.w1-0.03",
+      "gain": 0.65
+    },
+    {
+      "type": "whoosh",
+      "at": "L0.w2-0.25",
+      "gain": 0.8
+    },
+    {
+      "type": "click",
+      "at": "L0.w2+0.1",
+      "every": 0.11,
+      "until": "L1-0.5",
+      "gain": 0.3
+    },
+    {
+      "type": "paper",
+      "at": "L1-0.15",
+      "gain": 1.0
+    },
+    {
+      "type": "click",
+      "at": "L1+0.3",
+      "every": 0.065,
+      "until": "L1.end-0.2",
+      "gain": 0.6
+    },
+    {
+      "type": "whoosh",
+      "at": "L2-0.3",
+      "dur": 0.3,
+      "gain": 0.5
+    },
+    {
+      "type": "impact",
+      "at": "L2-0.02",
+      "gain": 1.0
+    },
+    {
+      "type": "click",
+      "at": "L3+0.05",
+      "every": 0.2,
+      "until": "L4-0.15",
+      "gain": 0.9
+    },
+    {
+      "type": "whoosh",
+      "at": "L4-0.28",
+      "dur": 0.3,
+      "gain": 0.5
+    },
+    {
+      "type": "stamp",
+      "at": "L4.w1",
+      "gain": 1.1
+    },
+    {
+      "type": "riser",
+      "at": "L4.w1+0.3",
+      "dur": 1.8,
+      "gain": 0.9
+    }
+  ]
+}
