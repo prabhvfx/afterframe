@@ -97,3 +97,13 @@ house at night for Seventh Room Part 2.
   The `.sh` scripts need Git Bash or WSL. Node 20+, Python 3.10+, FFmpeg required.
 - `.claude/skills/*` are symlinks. On Windows, git needs symlinks enabled
   (`git config core.symlinks true`, Developer Mode on) or they arrive as plain text files.
+  As of 2026-11-23 Developer Mode is still off on the PC, so the links are missing there.
+- Fonts load in code from `public/fonts` (`src/fonts.ts`, Inter variable and
+  JetBrains Mono, OFL). Never rely on OS fonts: the PC has neither installed.
+- PC Python is 3.15, too new for kokoro-onnx 0.6.1. Use the project venv:
+  `uv venv --python 3.12 .venv`, then `uv pip install --python .venv/Scripts/python.exe -r requirements.txt`,
+  and run scripts with `.venv/Scripts/python.exe`. Models live in `~/models` (`KOKORO_DIR`).
+- npm on Windows skips `@rspack/binding-win32-x64-msvc` (lock file made on Linux).
+  Fix: `npm i --no-save @rspack/binding-win32-x64-msvc@<version in package-lock>`.
+- The user said not to install Playwright's Chromium, so the kit setup stopped
+  there. /zach-d-films and /stick-figure renders need it. Ask before installing.
