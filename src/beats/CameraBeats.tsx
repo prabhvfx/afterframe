@@ -338,7 +338,7 @@ export const PencilPlan: React.FC<Beat & { drawAt?: number; houseAt?: number; fi
         </div>
       </div>
       {h0 !== undefined && <Tag text="THEIR HOUSE" p={sp(frame, fps, h0, SPRINGS.bouncy)} color={T.yellow} style={{ left: 64, top: 300 }} />}
-      {f0 !== undefined && <Tag text="2 PEOPLE" p={sp(frame, fps, f0 + 0.4, SPRINGS.bouncy)} color={T.text} style={{ left: 64, top: 300, opacity: zoom > 0.5 ? 0 : undefined }} />}
+      {f0 !== undefined && <Tag text="2 PEOPLE" p={zoom > 0.5 ? 0 : sp(frame, fps, f0 + 0.4, SPRINGS.bouncy)} color={T.text} style={{ left: 64, top: 300 }} />}
       {k0 !== undefined && <Tag text="BLUE HOODIE" p={sp(frame, fps, k0 + 0.1, SPRINGS.slam)} style={{ left: 600, top: 300 }} />}
     </AbsoluteFill>
   );

@@ -46,7 +46,7 @@ The pencil drawing has Theo in a blue hoodie. He bought it yesterday.
 
 Cliffhanger: the plan was drawn after they moved in.
 
-## Part 3: Mrs. Albrecht
+## Part 3 (built, 54.4 s): Mrs. Albrecht
 
 Recap: a plan with them in it. Nadia calls the previous owner's daughter.
 Mrs. Albrecht: "Father bricked up that room in 1974. He said it was for the

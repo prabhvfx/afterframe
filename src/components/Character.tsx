@@ -4,7 +4,7 @@ import { useCurrentFrame, useVideoConfig } from "remotion";
 // Flat vector character busts (viewBox 0 0 600 700). Each character is data:
 // colors + hair/outfit shapes. They blink on their own clock and only move
 // their mouth inside [talkFrom, talkTo] (seconds, local to the sequence).
-export type CharacterId = "nadia" | "theo";
+export type CharacterId = "nadia" | "theo" | "albrecht";
 
 export type Look = {
   skin: string;
@@ -19,16 +19,24 @@ export type Look = {
 export const LOOKS: Record<CharacterId, Look> = {
   nadia: { skin: "#C68A64", skinShade: "#A8704E", hair: "#17110F", top: "#2F4A6E", topShade: "#243A57", glasses: true, blinkOffset: 0 },
   theo: { skin: "#E2B490", skinShade: "#C8946F", hair: "#6A4428", top: "#8C2B2B", topShade: "#6E2020", glasses: false, blinkOffset: 1.3 },
+  albrecht: { skin: "#E8C3A6", skinShade: "#CFA285", hair: "#B9B6B0", top: "#7B6A93", topShade: "#62547A", glasses: false, blinkOffset: 0.7 },
 };
+
+// Name-plate and speech-bubble color per character.
+export const CAST_COLORS: Record<CharacterId, string> = { nadia: "#FFB46B", theo: "#8EC8FF", albrecht: "#C9A7F0" };
 
 const HairBack: React.FC<{ id: CharacterId; c: string }> = ({ id, c }) =>
   id === "nadia" ? (
     <path d="M138 300 C120 150 210 100 300 100 C390 100 480 150 462 300 L470 455 C430 478 392 462 380 430 L220 430 C208 462 170 478 130 455 Z" fill={c} />
+  ) : id === "albrecht" ? (
+    <path d="M140 300 C120 160 210 100 300 100 C390 100 480 160 460 300 L455 385 C430 400 400 390 390 362 L210 362 C200 390 170 400 145 385 Z" fill={c} />
   ) : null;
 
 const HairFront: React.FC<{ id: CharacterId; c: string }> = ({ id, c }) =>
   id === "nadia" ? (
     <path d="M146 262 C150 150 222 110 300 110 C378 110 450 150 454 262 C430 232 380 218 330 214 L300 236 L285 214 C225 218 176 232 146 262 Z" fill={c} />
+  ) : id === "albrecht" ? (
+    <path d="M150 270 C150 150 225 108 300 108 C375 108 450 150 450 270 C440 230 410 205 370 200 C350 225 320 230 300 215 C280 230 250 225 230 200 C190 205 160 230 150 270 Z" fill={c} />
   ) : (
     <path d="M150 282 C138 150 222 112 300 112 C382 112 466 148 452 282 L436 214 L410 246 L392 192 L360 236 L334 180 L304 228 L272 176 L244 232 L216 188 L196 246 L168 206 Z" fill={c} />
   );
@@ -41,14 +49,15 @@ export const Character: React.FC<{
   night?: boolean;
   style?: React.CSSProperties;
   look?: Partial<Look>; // outfit changes, e.g. Theo's new blue hoodie
-}> = ({ id, talkFrom = -1, talkTo = -1, worry = 0, night = false, style, look }) => {
+  asleep?: boolean;
+}> = ({ id, talkFrom = -1, talkTo = -1, worry = 0, night = false, style, look, asleep = false }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
   const L = { ...LOOKS[id], ...look };
   const t = frame / fps;
   // blink: 0.1 s closed every ~3.4 s, offset per character
   const cycle = (t + L.blinkOffset) % 3.4;
-  const lid = cycle < 0.1 ? 0.12 : 1;
+  const lid = asleep || cycle < 0.1 ? 0.12 : 1;
   const talking = t >= talkFrom && t <= talkTo;
   const open = talking ? Math.max(0, Math.sin(frame * 0.95) * 0.6 + Math.sin(frame * 0.37) * 0.4) : 0;
   const bob = Math.sin(t * 1.6 + L.blinkOffset) * 3 + (talking ? Math.sin(frame * 0.5) * 2 : 0);
@@ -65,6 +74,13 @@ export const Character: React.FC<{
           </>
         )}
         {id === "nadia" && <path d="M230 505 Q300 560 370 505" stroke={L.topShade} strokeWidth={22} fill="none" />}
+        {id === "albrecht" && (
+          <>
+            <path d="M232 506 L300 640 L368 506 Z" fill="#EDE6DA" />
+            <path d="M232 506 L300 640 M368 506 L300 640" stroke={L.topShade} strokeWidth={14} />
+            {[662, 692].map((y) => <circle key={y} cx={300} cy={y} r={7} fill={L.topShade} />)}
+          </>
+        )}
         <rect x={258} y={400} width={84} height={120} rx={30} fill={L.skinShade} />
         <HairBack id={id} c={L.hair} />
         <ellipse cx={300} cy={300} rx={150} ry={172} fill={L.skin} />
@@ -86,6 +102,11 @@ export const Character: React.FC<{
             <circle cx={240} cy={322} r={44} />
             <circle cx={360} cy={322} r={44} />
             <path d="M284 318 Q300 308 316 318" />
+          </g>
+        )}
+        {id === "albrecht" && (
+          <g stroke={L.skinShade} strokeWidth={5} fill="none" strokeLinecap="round">
+            <path d="M196 340 Q204 352 214 350 M404 340 Q396 352 386 350 M262 448 Q300 458 338 448" />
           </g>
         )}
         {/* nose + mouth */}

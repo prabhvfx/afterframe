@@ -70,7 +70,7 @@ safe zone (top 170 px, bottom 420 px, right 140 px).
 |---|---|---|
 | Rosenhan "The Fake Patients" (real) | main | 11 s preview only, superseded |
 | Citicorp "The 59-Story Secret" (real) | story/citicorp-part1 | Part 1 done (44 s). Parts 2 to 4 scripted in `stories/citicorp/BIBLE.md` |
-| **"The Seventh Room" (original horror)** | story/seventh-room | Parts 1 (47 s) and 2 (49.5 s) done. Parts 3 and 4 outlined in `stories/seventh-room/BIBLE.md` |
+| **"The Seventh Room" (original horror)** | story/seventh-room | Parts 1 (47 s), 2 (49.5 s) and 3 (54.4 s) done. Part 4 outlined in `stories/seventh-room/BIBLE.md` |
 
 The Seventh Room cast: Nadia Reyes (architect, 31, af_heart, amber), Theo Reyes
 (brother, 19, am_puck, sky blue), the Occupant (never seen), Mrs. Albrecht
@@ -92,9 +92,13 @@ Playwright Chromium, which is not installed on the PC. Part 2 uses 2D beats in
 ## Next steps
 
 1. Get the user's feedback on Seventh Room Part 1 (look, voices, names).
-2. Build Seventh Room Parts 3 and 4, then the 16:9 YouTube master.
+2. Build Seventh Room Part 4, then the 16:9 YouTube master.
    Part 2 continuity: Theo now owns a blue hoodie (`look` prop on CharacterCard),
    the pencil plan marks the gap as a red "7", a fictional store "Threadline Supply" sold the hoodie.
+   Part 3 continuity: Mrs. Albrecht is a character (`albrecht` in `Character.tsx`, grey bob, lilac
+   cardigan, bf_emma, pronounced /ˈɑlbɹɛkt/). Rental records show 0 leases every decade. The gap
+   read 0.91, 0.92, 0.93 m on nights 1 to 3. Theo vanished at 3:12, bed empty, carpet pulled toward
+   the wall. Part 3 beats live in `src/beats/NightBeats.tsx`.
 3. Brand kit: bios, avatar, banner. Then rebrand the accounts via browser.
 4. Merge branches into main once the user approves.
 

@@ -184,6 +184,23 @@ def scrape(dur=1.0):
     return x * np.minimum(1, t * 10) * np.minimum(1, (dur - t) * 5) * 0.6
 
 
+def ring(dur=1.0):
+    """Phone ringback: 440 + 480 Hz, soft edges."""
+    n = int(dur * SR)
+    t = np.arange(n) / SR
+    x = np.sin(2 * np.pi * 440 * t) + np.sin(2 * np.pi * 480 * t)
+    return x * np.minimum(1, t * 30) * np.minimum(1, (dur - t) * 30) * 0.18
+
+
+def brick(dur=0.35):
+    """A brick set into mortar: low thud with a gritty scrape."""
+    n = int(dur * SR)
+    t = np.arange(n) / SR
+    thud = np.sin(2 * np.pi * 95 * t) * env(n, 0.002, 0.05)
+    grit = lowpass(rng.standard_normal(n), 2500) * env(n, 0.003, 0.08) * 0.5
+    return np.tanh((thud + grit) * 1.5) * 0.7
+
+
 def bed_horror(dur, level):
     """Two close low tones beating (41 vs 43.6 Hz), a thin high whine, breath noise."""
     n = int(dur * SR)
@@ -213,7 +230,8 @@ def bed(dur, level=0.22):
 GEN = {"impact": impact, "stamp": stamp, "whoosh": whoosh, "click": click,
        "paper": paper, "riser": riser, "creak": creak, "tick": tick, "wind": wind,
        "knock": knock, "drill": drill, "hiss": hiss, "tape": tape,
-       "static": static, "pencil": pencil, "scrape": scrape}
+       "static": static, "pencil": pencil, "scrape": scrape,
+       "ring": ring, "brick": brick}
 
 
 def main():

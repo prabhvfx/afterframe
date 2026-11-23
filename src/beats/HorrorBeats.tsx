@@ -2,7 +2,7 @@ import React from "react";
 import { AbsoluteFill, Easing, interpolate, useCurrentFrame, useVideoConfig } from "remotion";
 import { T } from "../theme";
 import { clamp, lin, shake, sp, SPRINGS } from "../components/anim";
-import { Character, CharacterId, Look } from "../components/Character";
+import { CAST_COLORS, Character, CharacterId, Look } from "../components/Character";
 import { Tag } from "./TowerBeats";
 
 type Beat = { beatStart: number; dur: number };
@@ -98,7 +98,7 @@ export const CharacterCard: React.FC<Beat & {
   const tt = talkTo !== undefined ? talkTo - beatStart : -1;
   const bubbleP = sp(frame, fps, tf - 0.15, SPRINGS.bouncy);
   const chars = bubble ? Math.round(bubble.length * lin(frame, fps, tf, Math.max(tf + 0.2, tt))) : 0;
-  const color = who === "nadia" ? "#FFB46B" : "#8EC8FF";
+  const color = CAST_COLORS[who];
   const left = side === "left";
   return (
     <AbsoluteFill style={{ background: night ? NIGHT : DAY }}>

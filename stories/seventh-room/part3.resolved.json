@@ -1,0 +1,1064 @@
+{
+  "id": "seventh-room-p3",
+  "title": "The Seventh Room",
+  "part": 3,
+  "totalParts": 4,
+  "format": "vertical",
+  "fps": 60,
+  "durationSeconds": 54.44,
+  "bed": "horror",
+  "bedLevel": 0.26,
+  "captionHighlights": [
+    "pencil",
+    "them",
+    "daughter",
+    "albrecht",
+    "never",
+    "tenant",
+    "ninetyone",
+    "ninetytwo",
+    "ninetythree",
+    "centimeter",
+    "knocks",
+    "empty",
+    "wall"
+  ],
+  "cast": {
+    "nadia": {
+      "voice": "af_heart",
+      "speed": 1.0,
+      "color": "#FFB46B"
+    },
+    "theo": {
+      "voice": "am_puck",
+      "speed": 1.05,
+      "color": "#8EC8FF"
+    },
+    "albrecht": {
+      "voice": "bf_emma",
+      "speed": 0.95,
+      "color": "#C9A7F0"
+    }
+  },
+  "voice": {
+    "engine": "kokoro-82m-onnx",
+    "voice": "am_michael:0.6,am_onyx:0.4",
+    "speed": 1.08,
+    "lang": "en-us",
+    "file": "vo/seventh-room-p3.wav",
+    "leadIn": 0.25,
+    "tail": 2.0,
+    "lines": [
+      {
+        "text": "A floor plan, drawn in pencil. With them in it.",
+        "start": 0.37,
+        "dur": 3.3,
+        "words": [
+          {
+            "text": "A",
+            "start": 0.4,
+            "end": 0.45
+          },
+          {
+            "text": "floor",
+            "start": 0.525,
+            "end": 0.8
+          },
+          {
+            "text": "plan,",
+            "start": 0.85,
+            "end": 1.2
+          },
+          {
+            "text": "drawn",
+            "start": 1.275,
+            "end": 1.55
+          },
+          {
+            "text": "in",
+            "start": 1.575,
+            "end": 1.65
+          },
+          {
+            "text": "pencil.",
+            "start": 1.7,
+            "end": 2.3
+          },
+          {
+            "text": "With",
+            "start": 2.45,
+            "end": 2.6
+          },
+          {
+            "text": "them",
+            "start": 2.65,
+            "end": 2.875
+          },
+          {
+            "text": "in",
+            "start": 2.925,
+            "end": 3.025
+          },
+          {
+            "text": "it.",
+            "start": 3.075,
+            "end": 3.55
+          }
+        ]
+      },
+      {
+        "text": "Nadia tracked down the previous owner's daughter, Mrs. Albrecht.",
+        "say": "Nadia tracked down the previous owner's daughter, Mrs. /ˈɑlbɹɛkt/.",
+        "pauseBefore": 0.4,
+        "start": 4.07,
+        "dur": 3.9,
+        "words": [
+          {
+            "text": "Nadia",
+            "start": 4.1,
+            "end": 4.475
+          },
+          {
+            "text": "tracked",
+            "start": 4.525,
+            "end": 4.8
+          },
+          {
+            "text": "down",
+            "start": 4.85,
+            "end": 5.05
+          },
+          {
+            "text": "the",
+            "start": 5.075,
+            "end": 5.125
+          },
+          {
+            "text": "previous",
+            "start": 5.175,
+            "end": 5.55
+          },
+          {
+            "text": "owner's",
+            "start": 5.6,
+            "end": 5.95
+          },
+          {
+            "text": "daughter,",
+            "start": 6.0,
+            "end": 6.3
+          },
+          {
+            "text": "Mrs.",
+            "start": 6.375,
+            "end": 7.0
+          },
+          {
+            "text": "Albrecht.",
+            "start": 7.2,
+            "end": 7.85
+          }
+        ]
+      },
+      {
+        "text": "There's a room behind our hallway wall.",
+        "speaker": "nadia",
+        "pauseBefore": 0.5,
+        "start": 8.47,
+        "dur": 2.4,
+        "words": [
+          {
+            "text": "There's",
+            "start": 8.5,
+            "end": 8.7
+          },
+          {
+            "text": "a",
+            "start": 8.725,
+            "end": 8.775
+          },
+          {
+            "text": "room",
+            "start": 8.85,
+            "end": 9.25
+          },
+          {
+            "text": "behind",
+            "start": 9.3,
+            "end": 9.625
+          },
+          {
+            "text": "our",
+            "start": 9.65,
+            "end": 9.75
+          },
+          {
+            "text": "hallway",
+            "start": 9.8,
+            "end": 10.15
+          },
+          {
+            "text": "wall.",
+            "start": 10.2,
+            "end": 10.75
+          }
+        ]
+      },
+      {
+        "text": "Father bricked up that room in 1974.",
+        "say": "Father bricked up that room in nineteen-seventy-four.",
+        "speaker": "albrecht",
+        "pauseBefore": 0.5,
+        "start": 11.37,
+        "dur": 3.225,
+        "words": [
+          {
+            "text": "Father",
+            "start": 11.4,
+            "end": 11.725
+          },
+          {
+            "text": "bricked",
+            "start": 11.775,
+            "end": 11.975
+          },
+          {
+            "text": "up",
+            "start": 12.0,
+            "end": 12.15
+          },
+          {
+            "text": "that",
+            "start": 12.2,
+            "end": 12.375
+          },
+          {
+            "text": "room",
+            "start": 12.425,
+            "end": 12.675
+          },
+          {
+            "text": "in",
+            "start": 12.725,
+            "end": 12.8
+          },
+          {
+            "text": "1974.",
+            "start": 12.85,
+            "end": 14.475
+          }
+        ]
+      },
+      {
+        "text": "He said it was for the tenant.",
+        "speaker": "albrecht",
+        "pauseBefore": 0.45,
+        "start": 15.045,
+        "dur": 2.05,
+        "words": [
+          {
+            "text": "He",
+            "start": 15.075,
+            "end": 15.259
+          },
+          {
+            "text": "said",
+            "start": 15.259,
+            "end": 15.565
+          },
+          {
+            "text": "it",
+            "start": 15.565,
+            "end": 15.749
+          },
+          {
+            "text": "was",
+            "start": 15.749,
+            "end": 15.994
+          },
+          {
+            "text": "for",
+            "start": 15.994,
+            "end": 16.239
+          },
+          {
+            "text": "the",
+            "start": 16.239,
+            "end": 16.485
+          },
+          {
+            "text": "tenant.",
+            "start": 16.485,
+            "end": 16.975
+          }
+        ]
+      },
+      {
+        "text": "There was never a tenant. Not on any lease.",
+        "pauseBefore": 0.45,
+        "start": 17.545,
+        "dur": 2.725,
+        "words": [
+          {
+            "text": "There",
+            "start": 17.575,
+            "end": 17.926
+          },
+          {
+            "text": "was",
+            "start": 17.926,
+            "end": 18.16
+          },
+          {
+            "text": "never",
+            "start": 18.16,
+            "end": 18.511
+          },
+          {
+            "text": "a",
+            "start": 18.511,
+            "end": 18.628
+          },
+          {
+            "text": "tenant.",
+            "start": 18.628,
+            "end": 19.096
+          },
+          {
+            "text": "Not",
+            "start": 19.096,
+            "end": 19.331
+          },
+          {
+            "text": "on",
+            "start": 19.331,
+            "end": 19.506
+          },
+          {
+            "text": "any",
+            "start": 19.506,
+            "end": 19.74
+          },
+          {
+            "text": "lease.",
+            "start": 19.74,
+            "end": 20.15
+          }
+        ]
+      },
+      {
+        "text": "That night, Nadia measured the gap again. Ninety-one centimeters.",
+        "pauseBefore": 0.45,
+        "start": 20.72,
+        "dur": 4.2,
+        "words": [
+          {
+            "text": "That",
+            "start": 20.75,
+            "end": 20.925
+          },
+          {
+            "text": "night,",
+            "start": 20.975,
+            "end": 21.175
+          },
+          {
+            "text": "Nadia",
+            "start": 21.25,
+            "end": 21.6
+          },
+          {
+            "text": "measured",
+            "start": 21.65,
+            "end": 21.925
+          },
+          {
+            "text": "the",
+            "start": 21.95,
+            "end": 22.0
+          },
+          {
+            "text": "gap",
+            "start": 22.05,
+            "end": 22.275
+          },
+          {
+            "text": "again.",
+            "start": 22.325,
+            "end": 22.825
+          },
+          {
+            "text": "Ninety-one",
+            "start": 23.025,
+            "end": 23.65
+          },
+          {
+            "text": "centimeters.",
+            "start": 23.725,
+            "end": 24.8
+          }
+        ]
+      },
+      {
+        "text": "The next night, ninety-two.",
+        "pauseBefore": 0.45,
+        "start": 25.37,
+        "dur": 2.025,
+        "words": [
+          {
+            "text": "The",
+            "start": 25.4,
+            "end": 25.45
+          },
+          {
+            "text": "next",
+            "start": 25.475,
+            "end": 25.725
+          },
+          {
+            "text": "night,",
+            "start": 25.775,
+            "end": 26.05
+          },
+          {
+            "text": "ninety-two.",
+            "start": 26.125,
+            "end": 27.275
+          }
+        ]
+      },
+      {
+        "text": "Then ninety-three.",
+        "pauseBefore": 0.45,
+        "start": 27.845,
+        "dur": 1.625,
+        "words": [
+          {
+            "text": "Then",
+            "start": 27.875,
+            "end": 28.075
+          },
+          {
+            "text": "ninety-three.",
+            "start": 28.15,
+            "end": 29.35
+          }
+        ]
+      },
+      {
+        "text": "One more centimeter, every night.",
+        "pauseBefore": 0.4,
+        "start": 29.87,
+        "dur": 2.375,
+        "words": [
+          {
+            "text": "One",
+            "start": 29.9,
+            "end": 30.1
+          },
+          {
+            "text": "more",
+            "start": 30.15,
+            "end": 30.325
+          },
+          {
+            "text": "centimeter,",
+            "start": 30.4,
+            "end": 31.05
+          },
+          {
+            "text": "every",
+            "start": 31.15,
+            "end": 31.4
+          },
+          {
+            "text": "night.",
+            "start": 31.45,
+            "end": 32.125
+          }
+        ]
+      },
+      {
+        "text": "And Theo stopped waking up for the knocks.",
+        "pauseBefore": 0.5,
+        "start": 32.745,
+        "dur": 2.6,
+        "words": [
+          {
+            "text": "And",
+            "start": 32.775,
+            "end": 33.003
+          },
+          {
+            "text": "Theo",
+            "start": 33.003,
+            "end": 33.287
+          },
+          {
+            "text": "stopped",
+            "start": 33.287,
+            "end": 33.743
+          },
+          {
+            "text": "waking",
+            "start": 33.743,
+            "end": 34.142
+          },
+          {
+            "text": "up",
+            "start": 34.142,
+            "end": 34.313
+          },
+          {
+            "text": "for",
+            "start": 34.313,
+            "end": 34.541
+          },
+          {
+            "text": "the",
+            "start": 34.541,
+            "end": 34.769
+          },
+          {
+            "text": "knocks.",
+            "start": 34.769,
+            "end": 35.225
+          }
+        ]
+      },
+      {
+        "text": "What knocks? I slept great.",
+        "speaker": "theo",
+        "pauseBefore": 0.6,
+        "start": 35.945,
+        "dur": 1.7,
+        "words": [
+          {
+            "text": "What",
+            "start": 35.975,
+            "end": 36.1
+          },
+          {
+            "text": "knocks?",
+            "start": 36.15,
+            "end": 36.45
+          },
+          {
+            "text": "I",
+            "start": 36.5,
+            "end": 36.575
+          },
+          {
+            "text": "slept",
+            "start": 36.625,
+            "end": 36.8
+          },
+          {
+            "text": "great.",
+            "start": 36.85,
+            "end": 37.525
+          }
+        ]
+      },
+      {
+        "text": "Then one night, at 3:12, three knocks.",
+        "say": "Then one night, at three-twelve, three knocks.",
+        "pauseBefore": 0.6,
+        "start": 38.245,
+        "dur": 2.875,
+        "words": [
+          {
+            "text": "Then",
+            "start": 38.275,
+            "end": 38.425
+          },
+          {
+            "text": "one",
+            "start": 38.475,
+            "end": 38.65
+          },
+          {
+            "text": "night,",
+            "start": 38.7,
+            "end": 38.95
+          },
+          {
+            "text": "at",
+            "start": 39.025,
+            "end": 39.125
+          },
+          {
+            "text": "3:12,",
+            "start": 39.2,
+            "end": 39.8
+          },
+          {
+            "text": "three",
+            "start": 39.925,
+            "end": 40.125
+          },
+          {
+            "text": "knocks.",
+            "start": 40.175,
+            "end": 41.0
+          }
+        ]
+      },
+      {
+        "text": "Nadia opened Theo's door. His bed was empty.",
+        "pauseBefore": 1.8,
+        "start": 42.92,
+        "dur": 3.55,
+        "words": [
+          {
+            "text": "Nadia",
+            "start": 42.95,
+            "end": 43.325
+          },
+          {
+            "text": "opened",
+            "start": 43.375,
+            "end": 43.7
+          },
+          {
+            "text": "Theo's",
+            "start": 43.775,
+            "end": 44.15
+          },
+          {
+            "text": "door.",
+            "start": 44.225,
+            "end": 44.725
+          },
+          {
+            "text": "His",
+            "start": 44.85,
+            "end": 45.0
+          },
+          {
+            "text": "bed",
+            "start": 45.075,
+            "end": 45.3
+          },
+          {
+            "text": "was",
+            "start": 45.35,
+            "end": 45.475
+          },
+          {
+            "text": "empty.",
+            "start": 45.55,
+            "end": 46.35
+          }
+        ]
+      },
+      {
+        "text": "The hallway carpet was pulled tight. Toward the wall.",
+        "pauseBefore": 0.55,
+        "start": 47.02,
+        "dur": 3.325,
+        "words": [
+          {
+            "text": "The",
+            "start": 47.049,
+            "end": 47.1
+          },
+          {
+            "text": "hallway",
+            "start": 47.15,
+            "end": 47.5
+          },
+          {
+            "text": "carpet",
+            "start": 47.549,
+            "end": 47.875
+          },
+          {
+            "text": "was",
+            "start": 47.9,
+            "end": 48.025
+          },
+          {
+            "text": "pulled",
+            "start": 48.075,
+            "end": 48.325
+          },
+          {
+            "text": "tight.",
+            "start": 48.4,
+            "end": 48.924
+          },
+          {
+            "text": "Toward",
+            "start": 49.049,
+            "end": 49.325
+          },
+          {
+            "text": "the",
+            "start": 49.35,
+            "end": 49.424
+          },
+          {
+            "text": "wall.",
+            "start": 49.5,
+            "end": 50.225
+          }
+        ]
+      },
+      {
+        "text": "Part four.",
+        "pauseBefore": 1.0,
+        "start": 51.345,
+        "dur": 1.1,
+        "words": [
+          {
+            "text": "Part",
+            "start": 51.375,
+            "end": 51.625
+          },
+          {
+            "text": "four.",
+            "start": 51.7,
+            "end": 52.325
+          }
+        ]
+      }
+    ]
+  },
+  "beats": [
+    {
+      "id": "recap",
+      "start": 0,
+      "end": 3.92,
+      "component": "PencilPlan",
+      "props": {
+        "figuresAt": 2.45,
+        "hoodieAt": 2.65
+      }
+    },
+    {
+      "id": "call",
+      "start": 3.92,
+      "end": 8.32,
+      "component": "CallScreen",
+      "props": {
+        "connectAt": 7.2
+      }
+    },
+    {
+      "id": "nadiaCall",
+      "start": 8.32,
+      "end": 11.22,
+      "component": "CharacterCard",
+      "props": {
+        "who": "nadia",
+        "name": "",
+        "role": "",
+        "side": "left",
+        "bubble": "There's a room behind our hallway wall.",
+        "talkFrom": 8.47,
+        "talkTo": 10.87
+      }
+    },
+    {
+      "id": "albrecht",
+      "start": 11.22,
+      "end": 14.895,
+      "component": "CharacterCard",
+      "props": {
+        "who": "albrecht",
+        "name": "MRS. ALBRECHT",
+        "role": "THE OWNER'S DAUGHTER",
+        "side": "right",
+        "bubble": "Father bricked up that room in 1974.",
+        "talkFrom": 11.37,
+        "talkTo": 14.595
+      }
+    },
+    {
+      "id": "brick",
+      "start": 14.895,
+      "end": 17.395,
+      "component": "BrickUp",
+      "props": {
+        "quote": "He said it was for the tenant.",
+        "quoteFrom": 15.045,
+        "quoteTo": 17.095
+      }
+    },
+    {
+      "id": "records",
+      "start": 17.395,
+      "end": 20.57,
+      "component": "RecordsSearch",
+      "props": {
+        "rowsAt": 17.575,
+        "stampAt": 19.74
+      }
+    },
+    {
+      "id": "grow",
+      "start": 20.57,
+      "end": 32.595,
+      "component": "GapGrow",
+      "props": {
+        "steps": [
+          23.025,
+          26.125,
+          28.15
+        ],
+        "rateAt": 29.9
+      }
+    },
+    {
+      "id": "sleep",
+      "start": 32.595,
+      "end": 35.795,
+      "component": "SleepThrough",
+      "props": {
+        "knocks": [
+          34.769,
+          35.169,
+          35.569
+        ]
+      }
+    },
+    {
+      "id": "theoTalk",
+      "start": 35.795,
+      "end": 37.945,
+      "component": "CharacterCard",
+      "props": {
+        "who": "theo",
+        "name": "",
+        "role": "",
+        "side": "right",
+        "look": {
+          "top": "#3F6FB5",
+          "topShade": "#2E568F"
+        },
+        "bubble": "What knocks? I slept great.",
+        "talkFrom": 35.945,
+        "talkTo": 37.645
+      }
+    },
+    {
+      "id": "knock",
+      "start": 37.945,
+      "end": 42.72,
+      "component": "KnockNight",
+      "props": {
+        "clockAt": 39.2,
+        "knocks": [
+          41.32,
+          41.82,
+          42.32
+        ]
+      }
+    },
+    {
+      "id": "empty",
+      "start": 42.72,
+      "end": 46.87,
+      "component": "EmptyBed",
+      "props": {
+        "doorAt": 43.375,
+        "emptyAt": 45.55
+      }
+    },
+    {
+      "id": "carpet",
+      "start": 46.87,
+      "end": 51.045,
+      "component": "CarpetPull",
+      "props": {
+        "pullAt": 48.075,
+        "wallAt": 49.5
+      }
+    },
+    {
+      "id": "next",
+      "start": 51.045,
+      "end": 54.44,
+      "component": "NextPart",
+      "noCaptions": true,
+      "props": {
+        "next": 4,
+        "line": "Where is Theo?",
+        "cta": "FULL STORY ON YOUTUBE"
+      }
+    }
+  ],
+  "sfx": [
+    {
+      "type": "paper",
+      "at": 0.05,
+      "gain": 0.7
+    },
+    {
+      "type": "pencil",
+      "at": 2.45,
+      "dur": 0.8,
+      "gain": 0.5
+    },
+    {
+      "type": "whoosh",
+      "at": 3.62,
+      "gain": 0.5
+    },
+    {
+      "type": "ring",
+      "at": 4.525,
+      "dur": 1.4,
+      "gain": 0.5
+    },
+    {
+      "type": "ring",
+      "at": 6.525,
+      "dur": 1.0,
+      "gain": 0.5
+    },
+    {
+      "type": "click",
+      "at": 7.2,
+      "gain": 0.9
+    },
+    {
+      "type": "whoosh",
+      "at": 8.02,
+      "gain": 0.4
+    },
+    {
+      "type": "whoosh",
+      "at": 10.92,
+      "gain": 0.4
+    },
+    {
+      "type": "brick",
+      "at": 14.945,
+      "every": 0.32,
+      "until": 17.145,
+      "gain": 0.45
+    },
+    {
+      "type": "whoosh",
+      "at": 17.095,
+      "gain": 0.4
+    },
+    {
+      "type": "tick",
+      "at": 17.575,
+      "every": 0.22,
+      "until": 19.075,
+      "gain": 0.6
+    },
+    {
+      "type": "stamp",
+      "at": 19.74,
+      "gain": 0.9
+    },
+    {
+      "type": "whoosh",
+      "at": 20.27,
+      "gain": 0.4
+    },
+    {
+      "type": "tape",
+      "at": 22.925,
+      "gain": 0.8
+    },
+    {
+      "type": "tape",
+      "at": 26.025,
+      "gain": 0.8
+    },
+    {
+      "type": "tape",
+      "at": 28.05,
+      "gain": 0.8
+    },
+    {
+      "type": "impact",
+      "at": 29.9,
+      "gain": 0.45
+    },
+    {
+      "type": "knock",
+      "at": 34.769,
+      "gain": 0.55
+    },
+    {
+      "type": "knock",
+      "at": 35.169,
+      "gain": 0.55
+    },
+    {
+      "type": "knock",
+      "at": 35.569,
+      "gain": 0.55
+    },
+    {
+      "type": "whoosh",
+      "at": 35.495,
+      "gain": 0.4
+    },
+    {
+      "type": "hiss",
+      "at": 37.845,
+      "dur": 0.8,
+      "gain": 0.4
+    },
+    {
+      "type": "tick",
+      "at": 39.2,
+      "gain": 1.0
+    },
+    {
+      "type": "knock",
+      "at": 41.32,
+      "gain": 1.0
+    },
+    {
+      "type": "knock",
+      "at": 41.82,
+      "gain": 1.0
+    },
+    {
+      "type": "knock",
+      "at": 42.32,
+      "gain": 1.0
+    },
+    {
+      "type": "creak",
+      "at": 43.375,
+      "gain": 0.8
+    },
+    {
+      "type": "impact",
+      "at": 45.55,
+      "gain": 0.6
+    },
+    {
+      "type": "scrape",
+      "at": 48.075,
+      "dur": 1.0,
+      "gain": 0.7
+    },
+    {
+      "type": "impact",
+      "at": 49.5,
+      "gain": 0.6
+    },
+    {
+      "type": "riser",
+      "at": 49.7,
+      "dur": 1.6,
+      "gain": 0.8
+    },
+    {
+      "type": "stamp",
+      "at": 51.345,
+      "gain": 0.8
+    }
+  ]
+}

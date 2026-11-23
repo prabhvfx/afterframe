@@ -1,0 +1,460 @@
+{
+  "id": "seventh-room-p3",
+  "title": "The Seventh Room",
+  "part": 3,
+  "totalParts": 4,
+  "format": "vertical",
+  "fps": 60,
+  "durationSeconds": "auto",
+  "bed": "horror",
+  "bedLevel": 0.26,
+  "captionHighlights": [
+    "pencil",
+    "them",
+    "daughter",
+    "albrecht",
+    "never",
+    "tenant",
+    "ninetyone",
+    "ninetytwo",
+    "ninetythree",
+    "centimeter",
+    "knocks",
+    "empty",
+    "wall"
+  ],
+  "cast": {
+    "nadia": {
+      "voice": "af_heart",
+      "speed": 1.0,
+      "color": "#FFB46B"
+    },
+    "theo": {
+      "voice": "am_puck",
+      "speed": 1.05,
+      "color": "#8EC8FF"
+    },
+    "albrecht": {
+      "voice": "bf_emma",
+      "speed": 0.95,
+      "color": "#C9A7F0"
+    }
+  },
+  "voice": {
+    "engine": "kokoro-82m-onnx",
+    "voice": "am_michael:0.6,am_onyx:0.4",
+    "speed": 1.08,
+    "lang": "en-us",
+    "file": "vo/seventh-room-p3.wav",
+    "leadIn": 0.25,
+    "tail": 2.0,
+    "lines": [
+      {
+        "text": "A floor plan, drawn in pencil. With them in it."
+      },
+      {
+        "text": "Nadia tracked down the previous owner's daughter, Mrs. Albrecht.",
+        "say": "Nadia tracked down the previous owner's daughter, Mrs. /ˈɑlbɹɛkt/.",
+        "pauseBefore": 0.4
+      },
+      {
+        "text": "There's a room behind our hallway wall.",
+        "speaker": "nadia",
+        "pauseBefore": 0.5
+      },
+      {
+        "text": "Father bricked up that room in 1974.",
+        "say": "Father bricked up that room in nineteen-seventy-four.",
+        "speaker": "albrecht",
+        "pauseBefore": 0.5
+      },
+      {
+        "text": "He said it was for the tenant.",
+        "speaker": "albrecht",
+        "pauseBefore": 0.45
+      },
+      {
+        "text": "There was never a tenant. Not on any lease.",
+        "pauseBefore": 0.45
+      },
+      {
+        "text": "That night, Nadia measured the gap again. Ninety-one centimeters.",
+        "pauseBefore": 0.45
+      },
+      {
+        "text": "The next night, ninety-two.",
+        "pauseBefore": 0.45
+      },
+      {
+        "text": "Then ninety-three.",
+        "pauseBefore": 0.45
+      },
+      {
+        "text": "One more centimeter, every night.",
+        "pauseBefore": 0.4
+      },
+      {
+        "text": "And Theo stopped waking up for the knocks.",
+        "pauseBefore": 0.5
+      },
+      {
+        "text": "What knocks? I slept great.",
+        "speaker": "theo",
+        "pauseBefore": 0.6
+      },
+      {
+        "text": "Then one night, at 3:12, three knocks.",
+        "say": "Then one night, at three-twelve, three knocks.",
+        "pauseBefore": 0.6
+      },
+      {
+        "text": "Nadia opened Theo's door. His bed was empty.",
+        "pauseBefore": 1.8
+      },
+      {
+        "text": "The hallway carpet was pulled tight. Toward the wall.",
+        "pauseBefore": 0.55
+      },
+      {
+        "text": "Part four.",
+        "pauseBefore": 1.0
+      }
+    ]
+  },
+  "beats": [
+    {
+      "id": "recap",
+      "start": 0,
+      "end": "L1-0.15",
+      "component": "PencilPlan",
+      "props": {
+        "figuresAt": "L0.w6",
+        "hoodieAt": "L0.w7"
+      }
+    },
+    {
+      "id": "call",
+      "start": "L1-0.15",
+      "end": "L2-0.15",
+      "component": "CallScreen",
+      "props": {
+        "connectAt": "L1.w8"
+      }
+    },
+    {
+      "id": "nadiaCall",
+      "start": "L2-0.15",
+      "end": "L3-0.15",
+      "component": "CharacterCard",
+      "props": {
+        "who": "nadia",
+        "name": "",
+        "role": "",
+        "side": "left",
+        "bubble": "There's a room behind our hallway wall.",
+        "talkFrom": "L2",
+        "talkTo": "L2.end"
+      }
+    },
+    {
+      "id": "albrecht",
+      "start": "L3-0.15",
+      "end": "L4-0.15",
+      "component": "CharacterCard",
+      "props": {
+        "who": "albrecht",
+        "name": "MRS. ALBRECHT",
+        "role": "THE OWNER'S DAUGHTER",
+        "side": "right",
+        "bubble": "Father bricked up that room in 1974.",
+        "talkFrom": "L3",
+        "talkTo": "L3.end"
+      }
+    },
+    {
+      "id": "brick",
+      "start": "L4-0.15",
+      "end": "L5-0.15",
+      "component": "BrickUp",
+      "props": {
+        "quote": "He said it was for the tenant.",
+        "quoteFrom": "L4",
+        "quoteTo": "L4.end"
+      }
+    },
+    {
+      "id": "records",
+      "start": "L5-0.15",
+      "end": "L6-0.15",
+      "component": "RecordsSearch",
+      "props": {
+        "rowsAt": "L5.w0",
+        "stampAt": "L5.w8"
+      }
+    },
+    {
+      "id": "grow",
+      "start": "L6-0.15",
+      "end": "L10-0.15",
+      "component": "GapGrow",
+      "props": {
+        "steps": [
+          "L6.w7",
+          "L7.w3",
+          "L8.w1"
+        ],
+        "rateAt": "L9.w0"
+      }
+    },
+    {
+      "id": "sleep",
+      "start": "L10-0.15",
+      "end": "L11-0.15",
+      "component": "SleepThrough",
+      "props": {
+        "knocks": [
+          "L10.w7",
+          "L10.w7+0.4",
+          "L10.w7+0.8"
+        ]
+      }
+    },
+    {
+      "id": "theoTalk",
+      "start": "L11-0.15",
+      "end": "L12-0.3",
+      "component": "CharacterCard",
+      "props": {
+        "who": "theo",
+        "name": "",
+        "role": "",
+        "side": "right",
+        "look": {
+          "top": "#3F6FB5",
+          "topShade": "#2E568F"
+        },
+        "bubble": "What knocks? I slept great.",
+        "talkFrom": "L11",
+        "talkTo": "L11.end"
+      }
+    },
+    {
+      "id": "knock",
+      "start": "L12-0.3",
+      "end": "L13-0.2",
+      "component": "KnockNight",
+      "props": {
+        "clockAt": "L12.w4",
+        "knocks": [
+          "L12.end+0.2",
+          "L12.end+0.7",
+          "L12.end+1.2"
+        ]
+      }
+    },
+    {
+      "id": "empty",
+      "start": "L13-0.2",
+      "end": "L14-0.15",
+      "component": "EmptyBed",
+      "props": {
+        "doorAt": "L13.w1",
+        "emptyAt": "L13.w7"
+      }
+    },
+    {
+      "id": "carpet",
+      "start": "L14-0.15",
+      "end": "L15-0.3",
+      "component": "CarpetPull",
+      "props": {
+        "pullAt": "L14.w4",
+        "wallAt": "L14.w8"
+      }
+    },
+    {
+      "id": "next",
+      "start": "L15-0.3",
+      "end": "END",
+      "component": "NextPart",
+      "noCaptions": true,
+      "props": {
+        "next": 4,
+        "line": "Where is Theo?",
+        "cta": "FULL STORY ON YOUTUBE"
+      }
+    }
+  ],
+  "sfx": [
+    {
+      "type": "paper",
+      "at": 0.05,
+      "gain": 0.7
+    },
+    {
+      "type": "pencil",
+      "at": "L0.w6",
+      "dur": 0.8,
+      "gain": 0.5
+    },
+    {
+      "type": "whoosh",
+      "at": "L1-0.45",
+      "gain": 0.5
+    },
+    {
+      "type": "ring",
+      "at": "L1.w1",
+      "dur": 1.4,
+      "gain": 0.5
+    },
+    {
+      "type": "ring",
+      "at": "L1.w1+2.0",
+      "dur": 1.0,
+      "gain": 0.5
+    },
+    {
+      "type": "click",
+      "at": "L1.w8",
+      "gain": 0.9
+    },
+    {
+      "type": "whoosh",
+      "at": "L2-0.45",
+      "gain": 0.4
+    },
+    {
+      "type": "whoosh",
+      "at": "L3-0.45",
+      "gain": 0.4
+    },
+    {
+      "type": "brick",
+      "at": "L4-0.1",
+      "every": 0.32,
+      "until": "L5-0.4",
+      "gain": 0.45
+    },
+    {
+      "type": "whoosh",
+      "at": "L5-0.45",
+      "gain": 0.4
+    },
+    {
+      "type": "tick",
+      "at": "L5.w0",
+      "every": 0.22,
+      "until": "L5.w0+1.5",
+      "gain": 0.6
+    },
+    {
+      "type": "stamp",
+      "at": "L5.w8",
+      "gain": 0.9
+    },
+    {
+      "type": "whoosh",
+      "at": "L6-0.45",
+      "gain": 0.4
+    },
+    {
+      "type": "tape",
+      "at": "L6.w7-0.1",
+      "gain": 0.8
+    },
+    {
+      "type": "tape",
+      "at": "L7.w3-0.1",
+      "gain": 0.8
+    },
+    {
+      "type": "tape",
+      "at": "L8.w1-0.1",
+      "gain": 0.8
+    },
+    {
+      "type": "impact",
+      "at": "L9.w0",
+      "gain": 0.45
+    },
+    {
+      "type": "knock",
+      "at": "L10.w7",
+      "gain": 0.55
+    },
+    {
+      "type": "knock",
+      "at": "L10.w7+0.4",
+      "gain": 0.55
+    },
+    {
+      "type": "knock",
+      "at": "L10.w7+0.8",
+      "gain": 0.55
+    },
+    {
+      "type": "whoosh",
+      "at": "L11-0.45",
+      "gain": 0.4
+    },
+    {
+      "type": "hiss",
+      "at": "L12-0.4",
+      "dur": 0.8,
+      "gain": 0.4
+    },
+    {
+      "type": "tick",
+      "at": "L12.w4",
+      "gain": 1.0
+    },
+    {
+      "type": "knock",
+      "at": "L12.end+0.2",
+      "gain": 1.0
+    },
+    {
+      "type": "knock",
+      "at": "L12.end+0.7",
+      "gain": 1.0
+    },
+    {
+      "type": "knock",
+      "at": "L12.end+1.2",
+      "gain": 1.0
+    },
+    {
+      "type": "creak",
+      "at": "L13.w1",
+      "gain": 0.8
+    },
+    {
+      "type": "impact",
+      "at": "L13.w7",
+      "gain": 0.6
+    },
+    {
+      "type": "scrape",
+      "at": "L14.w4",
+      "dur": 1.0,
+      "gain": 0.7
+    },
+    {
+      "type": "impact",
+      "at": "L14.w8",
+      "gain": 0.6
+    },
+    {
+      "type": "riser",
+      "at": "L14.w8+0.2",
+      "dur": 1.6,
+      "gain": 0.8
+    },
+    {
+      "type": "stamp",
+      "at": "L15",
+      "gain": 0.8
+    }
+  ]
+}
