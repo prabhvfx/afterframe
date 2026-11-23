@@ -63,9 +63,12 @@ safe zone (top 170 px, bottom 420 px, right 140 px).
   red = danger/the antagonist, yellow = highlight, Inter Display + JetBrains Mono).
 - Brand kit (branch `brand/kit`): `brand/avatar.png`, `brand/banner.png`
   (rendered from `src/brand/BrandStills.tsx`), names, handles and bios in `brand/BRAND.md`.
-- Accounts to rebrand (signed in on the PC's Claude browser pane, 2026-11-24):
-  Instagram @hero3sunited ("Heroes United", Marvel bio), TikTok @bloxclips791
-  ("Bloxlives", no videos), YouTube "HeroesUnited" (no videos). Not rebranded yet.
+- Accounts rebranded 2026-11-24 (signed in on the PC's Claude browser pane):
+  all three are now "Afterframe", **@afterframe.animated**, with the bios from
+  BRAND.md. Old handles were Instagram @hero3sunited, TikTok @bloxclips791,
+  YouTube @HERO3S-UNITED. Profile photos and the YouTube banner must be uploaded
+  by the user (the browser pane has no file upload). TikTok username is locked
+  until about 2026-12-24.
 
 ## Stories and status
 

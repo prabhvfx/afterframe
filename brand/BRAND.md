@@ -12,10 +12,10 @@ and `BrandBanner brand/banner.png` (source: `src/brand/BrandStills.tsx`).
 
 Display name everywhere: **Afterframe**
 
-Handle, in order of preference (take the first one free on each platform):
-1. `afterframe`
-2. `afterframe.tv` (TikTok and YouTube allow the dot, YouTube also allows `-`)
-3. `afterframestories`
+Handle everywhere: **@afterframe.animated** (set 2026-11-24). `afterframe`,
+`afterframe.tv`, `afterframestories`, `afterframe.stories`, `afterframe_tv` and
+`watchafterframe` were taken. Instagram allows 2 name changes per 14 days, TikTok
+one username change per 30 days, YouTube 2 handle changes per 14 days.
 
 ## Bios
 
