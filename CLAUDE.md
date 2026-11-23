@@ -61,8 +61,11 @@ safe zone (top 170 px, bottom 420 px, right 140 px).
 
 - Name: Afterframe. Palette and fonts in `src/theme.ts` (dark bg, paper cards,
   red = danger/the antagonist, yellow = highlight, Inter Display + JetBrains Mono).
-- Not done yet: bios per platform, avatar and YouTube banner (code-generated),
-  rebranding the existing accounts.
+- Brand kit (branch `brand/kit`): `brand/avatar.png`, `brand/banner.png`
+  (rendered from `src/brand/BrandStills.tsx`), names, handles and bios in `brand/BRAND.md`.
+- Accounts to rebrand (signed in on the PC's Claude browser pane, 2026-11-24):
+  Instagram @hero3sunited ("Heroes United", Marvel bio), TikTok @bloxclips791
+  ("Bloxlives", no videos), YouTube "HeroesUnited" (no videos). Not rebranded yet.
 
 ## Stories and status
 
@@ -109,6 +112,8 @@ Playwright Chromium, which is not installed on the PC. Part 2 uses 2D beats in
 - `.claude/skills/*` are symlinks. On Windows, git needs symlinks enabled
   (`git config core.symlinks true`, Developer Mode on) or they arrive as plain text files.
   As of 2026-11-23 Developer Mode is still off on the PC, so the links are missing there.
+  Workaround (2026-11-24): the 11 skills are copied as real folders into `~/.claude/skills`.
+  After updating `vendor/`, copy them again.
 - Fonts load in code from `public/fonts` (`src/fonts.ts`, Inter variable and
   JetBrains Mono, OFL). Never rely on OS fonts: the PC has neither installed.
 - PC Python is 3.15, too new for kokoro-onnx 0.6.1. Use the project venv:

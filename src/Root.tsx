@@ -1,5 +1,6 @@
 import React from "react";
-import { Composition } from "remotion";
+import { Composition, Still } from "remotion";
+import { Avatar, Banner } from "./brand/BrandStills";
 import { StoryVertical, Story } from "./StoryVertical";
 import rosenhanP1 from "../stories/rosenhan/part1-preview.resolved.json";
 import citicorpP1 from "../stories/citicorp/part1.resolved.json";
@@ -30,5 +31,7 @@ export const RemotionRoot: React.FC = () => (
         defaultProps={{ story, sfxFile }}
       />
     ))}
+    <Still id="BrandAvatar" component={Avatar} width={1080} height={1080} />
+    <Still id="BrandBanner" component={Banner} width={2560} height={1440} />
   </>
 );
