@@ -45,10 +45,11 @@ whitelightai. **No AI video generation, no morphing clips.**
 3. `scripts/sfx.py`: all sound synthesized in code (no samples). Beds: default, `horror`.
 4. Remotion (`src/`): `StoryVertical` reads the resolved JSON. Components are
    registered by name in `src/StoryVertical.tsx`. Register each episode in `src/Root.tsx`.
-5. Render, then `scripts/master.sh` (two-pass loudnorm to -14 LUFS, -1.5 dBTP,
-   plus a 4x oversampled limiter). Verify with `ffmpeg -i X -af ebur128=peak=true -f null -`.
-   Masters made before 2026-11-23 (Citicorp P1, Seventh Room P1) peak at -0.9 dBTP,
-   above the ceiling, because the old script had no limiter.
+5. Render, then `scripts/master.sh`: loudnorm plus a 4x oversampled limiter,
+   then a correction pass. It prints the result and fails if it misses
+   -14 LUFS (±0.3) or goes above -1.5 dBTP. On 2026-11-23 Citicorp P1 and
+   Seventh Room P1 were re-mastered from their old masters (the old script let
+   peaks reach -0.9 dBTP). Their video streams are byte-identical to the originals.
 6. Review a contact sheet of stills for every beat. Fix overlaps, then re-render.
 7. Approved masters go in `renders/`. Drafts stay in `out/` (gitignored).
 
