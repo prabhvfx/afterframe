@@ -36,7 +36,7 @@ comes out. Then something knocks back, right where the drill was.
 
 Cliffhanger: what is in the gap.
 
-## Part 2: The Camera
+## Part 2 (built, 49.5 s): The Camera
 
 Recap: 90 cm, three knocks, a hole. Nadia feeds a phone inspection camera
 through the hole. A narrow room. A chair facing the wall. A desk. On the desk,

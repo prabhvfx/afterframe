@@ -2,15 +2,15 @@ import React from "react";
 import { AbsoluteFill, Easing, interpolate, useCurrentFrame, useVideoConfig } from "remotion";
 import { T } from "../theme";
 import { clamp, lin, shake, sp, SPRINGS } from "../components/anim";
-import { Character, CharacterId } from "../components/Character";
+import { Character, CharacterId, Look } from "../components/Character";
 import { Tag } from "./TowerBeats";
 
 type Beat = { beatStart: number; dur: number };
 
-const NIGHT = "#06070C";
-const DAY = "#12161F";
+export const NIGHT = "#06070C";
+export const DAY = "#12161F";
 
-const BlueGrid: React.FC<{ opacity?: number }> = ({ opacity = 0.14 }) => (
+export const BlueGrid: React.FC<{ opacity?: number }> = ({ opacity = 0.14 }) => (
   <AbsoluteFill style={{ opacity,
     backgroundImage: `linear-gradient(${T.blue}55 2px, transparent 2px), linear-gradient(90deg, ${T.blue}55 2px, transparent 2px)`,
     backgroundSize: "48px 48px" }} />
@@ -88,8 +88,8 @@ export const ListingCount: React.FC<Beat & { rooms: number; roomsAt: number; cou
 // 2 ─ Character card: bust slides in, name plate, optional speech bubble.
 export const CharacterCard: React.FC<Beat & {
   who: CharacterId; name: string; role: string; side: "left" | "right"; propIcon?: "tape";
-  bubble?: string; talkFrom?: number; talkTo?: number; night?: boolean;
-}> = ({ who, name, role, side, propIcon, bubble, talkFrom, talkTo, night = false, beatStart }) => {
+  bubble?: string; talkFrom?: number; talkTo?: number; night?: boolean; look?: Partial<Look>;
+}> = ({ who, name, role, side, propIcon, bubble, talkFrom, talkTo, night = false, look, beatStart }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
   const enter = sp(frame, fps, 0, SPRINGS.bouncy);
@@ -106,7 +106,7 @@ export const CharacterCard: React.FC<Beat & {
       {night && <AbsoluteFill style={{ background: `radial-gradient(circle at ${left ? 35 : 65}% 62%, #1C2A4A 0%, transparent 45%)` }} />}
       <div style={{ position: "absolute", [left ? "left" : "right"]: -60, top: 520, width: 760, height: 887,
         translate: `${(1 - enter) * (left ? -500 : 500)}px 0`, scale: String(night ? 1.12 : 1) } as React.CSSProperties}>
-        <Character id={who} talkFrom={tf} talkTo={tt} night={night} worry={night ? 1 : 0} style={{ width: "100%", height: "100%" }} />
+        <Character id={who} look={look} talkFrom={tf} talkTo={tt} night={night} worry={night ? 1 : 0} style={{ width: "100%", height: "100%" }} />
       </div>
       {name && (
         <div style={{ position: "absolute", top: 380, [left ? "right" : "left"]: 70, textAlign: left ? "right" : "left",

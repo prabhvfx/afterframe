@@ -1,0 +1,1028 @@
+{
+  "id": "seventh-room-p2",
+  "title": "The Seventh Room",
+  "part": 2,
+  "totalParts": 4,
+  "format": "vertical",
+  "fps": 60,
+  "durationSeconds": 49.49,
+  "bed": "horror",
+  "bedLevel": 0.26,
+  "captionHighlights": [
+    "ninety",
+    "knocks",
+    "hole",
+    "camera",
+    "room",
+    "chair",
+    "wall",
+    "desk",
+    "pencil",
+    "figures",
+    "blue",
+    "hoodie",
+    "after"
+  ],
+  "cast": {
+    "nadia": {
+      "voice": "af_heart",
+      "speed": 1.0,
+      "color": "#FFB46B"
+    },
+    "theo": {
+      "voice": "am_puck",
+      "speed": 1.05,
+      "color": "#8EC8FF"
+    }
+  },
+  "voice": {
+    "engine": "kokoro-82m-onnx",
+    "voice": "am_michael:0.6,am_onyx:0.4",
+    "speed": 1.08,
+    "lang": "en-us",
+    "file": "vo/seventh-room-p2.wav",
+    "leadIn": 0.25,
+    "tail": 2.0,
+    "lines": [
+      {
+        "text": "Ninety centimeters. Three knocks. A hole in the wall.",
+        "start": 0.37,
+        "dur": 3.55,
+        "words": [
+          {
+            "text": "Ninety",
+            "start": 0.4,
+            "end": 0.841
+          },
+          {
+            "text": "centimeters.",
+            "start": 0.841,
+            "end": 1.659
+          },
+          {
+            "text": "Three",
+            "start": 1.659,
+            "end": 2.037
+          },
+          {
+            "text": "knocks.",
+            "start": 2.037,
+            "end": 2.541
+          },
+          {
+            "text": "A",
+            "start": 2.541,
+            "end": 2.667
+          },
+          {
+            "text": "hole",
+            "start": 2.667,
+            "end": 2.981
+          },
+          {
+            "text": "in",
+            "start": 2.981,
+            "end": 3.17
+          },
+          {
+            "text": "the",
+            "start": 3.17,
+            "end": 3.422
+          },
+          {
+            "text": "wall.",
+            "start": 3.422,
+            "end": 3.8
+          }
+        ]
+      },
+      {
+        "text": "So Nadia bought an inspection camera. A tiny lens on a cable.",
+        "pauseBefore": 0.45,
+        "start": 4.37,
+        "dur": 4.3,
+        "words": [
+          {
+            "text": "So",
+            "start": 4.4,
+            "end": 4.5
+          },
+          {
+            "text": "Nadia",
+            "start": 4.55,
+            "end": 4.925
+          },
+          {
+            "text": "bought",
+            "start": 4.975,
+            "end": 5.175
+          },
+          {
+            "text": "an",
+            "start": 5.2,
+            "end": 5.25
+          },
+          {
+            "text": "inspection",
+            "start": 5.275,
+            "end": 5.85
+          },
+          {
+            "text": "camera.",
+            "start": 5.9,
+            "end": 6.45
+          },
+          {
+            "text": "A",
+            "start": 6.65,
+            "end": 6.7
+          },
+          {
+            "text": "tiny",
+            "start": 6.775,
+            "end": 7.175
+          },
+          {
+            "text": "lens",
+            "start": 7.225,
+            "end": 7.55
+          },
+          {
+            "text": "on",
+            "start": 7.575,
+            "end": 7.675
+          },
+          {
+            "text": "a",
+            "start": 7.7,
+            "end": 7.725
+          },
+          {
+            "text": "cable.",
+            "start": 7.775,
+            "end": 8.55
+          }
+        ]
+      },
+      {
+        "text": "She fed it through the hole.",
+        "pauseBefore": 0.3,
+        "start": 8.97,
+        "dur": 1.8,
+        "words": [
+          {
+            "text": "She",
+            "start": 9.0,
+            "end": 9.1
+          },
+          {
+            "text": "fed",
+            "start": 9.175,
+            "end": 9.35
+          },
+          {
+            "text": "it",
+            "start": 9.4,
+            "end": 9.5
+          },
+          {
+            "text": "through",
+            "start": 9.575,
+            "end": 9.75
+          },
+          {
+            "text": "the",
+            "start": 9.775,
+            "end": 9.85
+          },
+          {
+            "text": "hole.",
+            "start": 9.925,
+            "end": 10.65
+          }
+        ]
+      },
+      {
+        "text": "On her phone, a room appeared. Narrow. Dusty. No door.",
+        "pauseBefore": 0.5,
+        "start": 11.27,
+        "dur": 3.675,
+        "words": [
+          {
+            "text": "On",
+            "start": 11.3,
+            "end": 11.4
+          },
+          {
+            "text": "her",
+            "start": 11.425,
+            "end": 11.5
+          },
+          {
+            "text": "phone,",
+            "start": 11.575,
+            "end": 11.85
+          },
+          {
+            "text": "a",
+            "start": 11.9,
+            "end": 11.95
+          },
+          {
+            "text": "room",
+            "start": 12.0,
+            "end": 12.175
+          },
+          {
+            "text": "appeared.",
+            "start": 12.2,
+            "end": 12.8
+          },
+          {
+            "text": "Narrow.",
+            "start": 12.95,
+            "end": 13.325
+          },
+          {
+            "text": "Dusty.",
+            "start": 13.4,
+            "end": 13.775
+          },
+          {
+            "text": "No",
+            "start": 13.85,
+            "end": 14.025
+          },
+          {
+            "text": "door.",
+            "start": 14.1,
+            "end": 14.825
+          }
+        ]
+      },
+      {
+        "text": "A chair, facing the wall.",
+        "pauseBefore": 0.55,
+        "start": 15.495,
+        "dur": 2.0,
+        "words": [
+          {
+            "text": "A",
+            "start": 15.525,
+            "end": 15.575
+          },
+          {
+            "text": "chair,",
+            "start": 15.65,
+            "end": 16.05
+          },
+          {
+            "text": "facing",
+            "start": 16.125,
+            "end": 16.5
+          },
+          {
+            "text": "the",
+            "start": 16.525,
+            "end": 16.6
+          },
+          {
+            "text": "wall.",
+            "start": 16.675,
+            "end": 17.375
+          }
+        ]
+      },
+      {
+        "text": "A desk.",
+        "pauseBefore": 0.5,
+        "start": 17.995,
+        "dur": 0.825,
+        "words": [
+          {
+            "text": "A",
+            "start": 18.025,
+            "end": 18.1
+          },
+          {
+            "text": "desk.",
+            "start": 18.175,
+            "end": 18.7
+          }
+        ]
+      },
+      {
+        "text": "And on the desk, a sheet of paper.",
+        "pauseBefore": 0.4,
+        "start": 19.22,
+        "dur": 2.175,
+        "words": [
+          {
+            "text": "And",
+            "start": 19.25,
+            "end": 19.481
+          },
+          {
+            "text": "on",
+            "start": 19.481,
+            "end": 19.655
+          },
+          {
+            "text": "the",
+            "start": 19.655,
+            "end": 19.886
+          },
+          {
+            "text": "desk,",
+            "start": 19.886,
+            "end": 20.233
+          },
+          {
+            "text": "a",
+            "start": 20.233,
+            "end": 20.349
+          },
+          {
+            "text": "sheet",
+            "start": 20.349,
+            "end": 20.696
+          },
+          {
+            "text": "of",
+            "start": 20.696,
+            "end": 20.87
+          },
+          {
+            "text": "paper.",
+            "start": 20.87,
+            "end": 21.275
+          }
+        ]
+      },
+      {
+        "text": "A floor plan. Of their house. In pencil.",
+        "pauseBefore": 0.5,
+        "start": 21.895,
+        "dur": 2.75,
+        "words": [
+          {
+            "text": "A",
+            "start": 21.925,
+            "end": 21.975
+          },
+          {
+            "text": "floor",
+            "start": 22.05,
+            "end": 22.275
+          },
+          {
+            "text": "plan.",
+            "start": 22.325,
+            "end": 22.65
+          },
+          {
+            "text": "Of",
+            "start": 22.7,
+            "end": 22.75
+          },
+          {
+            "text": "their",
+            "start": 22.775,
+            "end": 22.925
+          },
+          {
+            "text": "house.",
+            "start": 22.975,
+            "end": 23.4
+          },
+          {
+            "text": "In",
+            "start": 23.525,
+            "end": 23.625
+          },
+          {
+            "text": "pencil.",
+            "start": 23.7,
+            "end": 24.525
+          }
+        ]
+      },
+      {
+        "text": "Huh. Previous owner was an architect too, I guess.",
+        "speaker": "theo",
+        "pauseBefore": 0.45,
+        "start": 25.095,
+        "dur": 2.9,
+        "words": [
+          {
+            "text": "Huh.",
+            "start": 25.125,
+            "end": 25.325
+          },
+          {
+            "text": "Previous",
+            "start": 25.425,
+            "end": 25.775
+          },
+          {
+            "text": "owner",
+            "start": 25.825,
+            "end": 26.075
+          },
+          {
+            "text": "was",
+            "start": 26.125,
+            "end": 26.225
+          },
+          {
+            "text": "an",
+            "start": 26.25,
+            "end": 26.3
+          },
+          {
+            "text": "architect",
+            "start": 26.35,
+            "end": 26.8
+          },
+          {
+            "text": "too,",
+            "start": 26.85,
+            "end": 27.0
+          },
+          {
+            "text": "I",
+            "start": 27.05,
+            "end": 27.15
+          },
+          {
+            "text": "guess.",
+            "start": 27.2,
+            "end": 27.875
+          }
+        ]
+      },
+      {
+        "text": "Two small figures were drawn in the bedrooms.",
+        "pauseBefore": 0.4,
+        "start": 28.395,
+        "dur": 2.95,
+        "words": [
+          {
+            "text": "Two",
+            "start": 28.425,
+            "end": 28.668
+          },
+          {
+            "text": "small",
+            "start": 28.668,
+            "end": 29.033
+          },
+          {
+            "text": "figures",
+            "start": 29.033,
+            "end": 29.52
+          },
+          {
+            "text": "were",
+            "start": 29.52,
+            "end": 29.825
+          },
+          {
+            "text": "drawn",
+            "start": 29.825,
+            "end": 30.19
+          },
+          {
+            "text": "in",
+            "start": 30.19,
+            "end": 30.373
+          },
+          {
+            "text": "the",
+            "start": 30.373,
+            "end": 30.616
+          },
+          {
+            "text": "bedrooms.",
+            "start": 30.616,
+            "end": 31.225
+          }
+        ]
+      },
+      {
+        "text": "Nadia zoomed in.",
+        "pauseBefore": 0.35,
+        "start": 31.695,
+        "dur": 1.65,
+        "words": [
+          {
+            "text": "Nadia",
+            "start": 31.725,
+            "end": 32.125
+          },
+          {
+            "text": "zoomed",
+            "start": 32.225,
+            "end": 32.6
+          },
+          {
+            "text": "in.",
+            "start": 32.65,
+            "end": 33.225
+          }
+        ]
+      },
+      {
+        "text": "The one in Theo's room wore a blue hoodie.",
+        "pauseBefore": 0.5,
+        "start": 33.845,
+        "dur": 2.925,
+        "words": [
+          {
+            "text": "The",
+            "start": 33.875,
+            "end": 33.95
+          },
+          {
+            "text": "one",
+            "start": 34.0,
+            "end": 34.2
+          },
+          {
+            "text": "in",
+            "start": 34.25,
+            "end": 34.35
+          },
+          {
+            "text": "Theo's",
+            "start": 34.425,
+            "end": 34.8
+          },
+          {
+            "text": "room",
+            "start": 34.875,
+            "end": 35.3
+          },
+          {
+            "text": "wore",
+            "start": 35.4,
+            "end": 35.575
+          },
+          {
+            "text": "a",
+            "start": 35.6,
+            "end": 35.625
+          },
+          {
+            "text": "blue",
+            "start": 35.7,
+            "end": 35.925
+          },
+          {
+            "text": "hoodie.",
+            "start": 35.975,
+            "end": 36.65
+          }
+        ]
+      },
+      {
+        "text": "Theo. When did you buy that hoodie?",
+        "speaker": "nadia",
+        "speed": 0.95,
+        "pauseBefore": 0.8,
+        "start": 37.57,
+        "dur": 2.175,
+        "words": [
+          {
+            "text": "Theo.",
+            "start": 37.6,
+            "end": 38.1
+          },
+          {
+            "text": "When",
+            "start": 38.2,
+            "end": 38.325
+          },
+          {
+            "text": "did",
+            "start": 38.35,
+            "end": 38.45
+          },
+          {
+            "text": "you",
+            "start": 38.475,
+            "end": 38.55
+          },
+          {
+            "text": "buy",
+            "start": 38.575,
+            "end": 38.775
+          },
+          {
+            "text": "that",
+            "start": 38.825,
+            "end": 38.975
+          },
+          {
+            "text": "hoodie?",
+            "start": 39.025,
+            "end": 39.625
+          }
+        ]
+      },
+      {
+        "text": "Yesterday. Why?",
+        "speaker": "theo",
+        "pauseBefore": 0.35,
+        "start": 40.095,
+        "dur": 1.3,
+        "words": [
+          {
+            "text": "Yesterday.",
+            "start": 40.125,
+            "end": 40.6
+          },
+          {
+            "text": "Why?",
+            "start": 40.675,
+            "end": 41.275
+          }
+        ]
+      },
+      {
+        "text": "Someone drew that plan after they moved in.",
+        "speed": 0.98,
+        "pauseBefore": 0.9,
+        "start": 42.295,
+        "dur": 3.0,
+        "words": [
+          {
+            "text": "Someone",
+            "start": 42.325,
+            "end": 42.675
+          },
+          {
+            "text": "drew",
+            "start": 42.725,
+            "end": 42.875
+          },
+          {
+            "text": "that",
+            "start": 42.925,
+            "end": 43.1
+          },
+          {
+            "text": "plan",
+            "start": 43.175,
+            "end": 43.625
+          },
+          {
+            "text": "after",
+            "start": 43.7,
+            "end": 43.95
+          },
+          {
+            "text": "they",
+            "start": 43.975,
+            "end": 44.1
+          },
+          {
+            "text": "moved",
+            "start": 44.15,
+            "end": 44.45
+          },
+          {
+            "text": "in.",
+            "start": 44.5,
+            "end": 45.175
+          }
+        ]
+      },
+      {
+        "text": "Part three.",
+        "pauseBefore": 1.0,
+        "start": 46.295,
+        "dur": 1.2,
+        "words": [
+          {
+            "text": "Part",
+            "start": 46.325,
+            "end": 46.575
+          },
+          {
+            "text": "three.",
+            "start": 46.65,
+            "end": 47.375
+          }
+        ]
+      }
+    ]
+  },
+  "beats": [
+    {
+      "id": "recap",
+      "start": 0,
+      "end": 4.22,
+      "component": "RecapStrip",
+      "props": {
+        "items": [
+          {
+            "at": 0.4,
+            "label": "0.90 M",
+            "sub": "NO DOOR",
+            "icon": "gap"
+          },
+          {
+            "at": 1.659,
+            "label": "3 KNOCKS",
+            "sub": "3:12 AM",
+            "icon": "knock"
+          },
+          {
+            "at": 2.541,
+            "label": "A HOLE",
+            "sub": "COLD AIR",
+            "icon": "hole"
+          }
+        ]
+      }
+    },
+    {
+      "id": "camera",
+      "start": 4.22,
+      "end": 8.82,
+      "component": "CameraKit",
+      "props": {
+        "lensAt": 6.65
+      }
+    },
+    {
+      "id": "insert",
+      "start": 8.82,
+      "end": 11.17,
+      "component": "CableInsert",
+      "props": {
+        "pushAt": 9.175
+      }
+    },
+    {
+      "id": "feed",
+      "start": 11.17,
+      "end": 21.745,
+      "component": "PhoneFeed",
+      "props": {
+        "roomAt": 12.0,
+        "chairAt": 15.65,
+        "deskAt": 18.175,
+        "paperAt": 20.349
+      }
+    },
+    {
+      "id": "plan",
+      "start": 21.745,
+      "end": 24.895,
+      "component": "PencilPlan",
+      "props": {
+        "drawAt": 21.925,
+        "houseAt": 22.775
+      }
+    },
+    {
+      "id": "theoLaugh",
+      "start": 24.895,
+      "end": 28.245,
+      "component": "CharacterCard",
+      "props": {
+        "who": "theo",
+        "name": "",
+        "role": "",
+        "side": "right",
+        "bubble": "Huh. Previous owner was an architect too, I guess.",
+        "talkFrom": 25.095,
+        "talkTo": 27.995
+      }
+    },
+    {
+      "id": "figures",
+      "start": 28.245,
+      "end": 37.32,
+      "component": "PencilPlan",
+      "props": {
+        "figuresAt": 29.033,
+        "zoomAt": 32.225,
+        "hoodieAt": 35.7
+      }
+    },
+    {
+      "id": "nadiaAsk",
+      "start": 37.32,
+      "end": 39.945,
+      "component": "CharacterCard",
+      "props": {
+        "who": "nadia",
+        "name": "",
+        "role": "",
+        "side": "left",
+        "bubble": "Theo. When did you buy that hoodie?",
+        "talkFrom": 37.57,
+        "talkTo": 39.745
+      }
+    },
+    {
+      "id": "theoBlue",
+      "start": 39.945,
+      "end": 41.995,
+      "component": "CharacterCard",
+      "props": {
+        "who": "theo",
+        "name": "",
+        "role": "",
+        "side": "right",
+        "look": {
+          "top": "#3F6FB5",
+          "topShade": "#2E568F"
+        },
+        "bubble": "Yesterday. Why?",
+        "talkFrom": 40.095,
+        "talkTo": 41.395
+      }
+    },
+    {
+      "id": "proof",
+      "start": 41.995,
+      "end": 45.995,
+      "component": "ReceiptProof",
+      "props": {
+        "receiptAt": 42.325,
+        "drawingAt": 42.725,
+        "stampAt": 43.7
+      }
+    },
+    {
+      "id": "next",
+      "start": 45.995,
+      "end": 49.49,
+      "component": "NextPart",
+      "noCaptions": true,
+      "props": {
+        "next": 3,
+        "line": "Who drew it?",
+        "cta": "FULL STORY ON YOUTUBE"
+      }
+    }
+  ],
+  "sfx": [
+    {
+      "type": "stamp",
+      "at": 0.4,
+      "gain": 0.6
+    },
+    {
+      "type": "knock",
+      "at": 1.659,
+      "gain": 0.7
+    },
+    {
+      "type": "knock",
+      "at": 1.839,
+      "gain": 0.7
+    },
+    {
+      "type": "knock",
+      "at": 2.019,
+      "gain": 0.7
+    },
+    {
+      "type": "stamp",
+      "at": 2.541,
+      "gain": 0.6
+    },
+    {
+      "type": "whoosh",
+      "at": 3.97,
+      "gain": 0.5
+    },
+    {
+      "type": "click",
+      "at": 6.65,
+      "gain": 0.8
+    },
+    {
+      "type": "whoosh",
+      "at": 8.57,
+      "gain": 0.4
+    },
+    {
+      "type": "scrape",
+      "at": 9.175,
+      "dur": 1.2,
+      "gain": 0.6
+    },
+    {
+      "type": "static",
+      "at": 11.17,
+      "dur": 0.6,
+      "gain": 0.7
+    },
+    {
+      "type": "static",
+      "at": 12.0,
+      "dur": 9.0,
+      "gain": 0.14
+    },
+    {
+      "type": "tick",
+      "at": 15.65,
+      "gain": 0.6
+    },
+    {
+      "type": "tick",
+      "at": 18.175,
+      "gain": 0.6
+    },
+    {
+      "type": "creak",
+      "at": 18.575,
+      "gain": 0.35
+    },
+    {
+      "type": "tick",
+      "at": 20.349,
+      "gain": 0.6
+    },
+    {
+      "type": "paper",
+      "at": 21.745,
+      "gain": 0.7
+    },
+    {
+      "type": "pencil",
+      "at": 21.925,
+      "dur": 2.2,
+      "gain": 0.6
+    },
+    {
+      "type": "whoosh",
+      "at": 24.595,
+      "gain": 0.4
+    },
+    {
+      "type": "whoosh",
+      "at": 27.895,
+      "gain": 0.4
+    },
+    {
+      "type": "pencil",
+      "at": 29.033,
+      "dur": 0.8,
+      "gain": 0.5
+    },
+    {
+      "type": "whoosh",
+      "at": 32.125,
+      "gain": 0.5
+    },
+    {
+      "type": "impact",
+      "at": 35.7,
+      "gain": 0.55
+    },
+    {
+      "type": "hiss",
+      "at": 35.7,
+      "dur": 1.4,
+      "gain": 0.4
+    },
+    {
+      "type": "whoosh",
+      "at": 37.07,
+      "gain": 0.4
+    },
+    {
+      "type": "whoosh",
+      "at": 39.645,
+      "gain": 0.4
+    },
+    {
+      "type": "paper",
+      "at": 41.995,
+      "gain": 0.6
+    },
+    {
+      "type": "stamp",
+      "at": 43.7,
+      "gain": 0.9
+    },
+    {
+      "type": "riser",
+      "at": 43.9,
+      "dur": 1.6,
+      "gain": 0.7
+    },
+    {
+      "type": "stamp",
+      "at": 46.295,
+      "gain": 0.8
+    }
+  ]
+}

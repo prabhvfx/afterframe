@@ -6,7 +6,7 @@ import { useCurrentFrame, useVideoConfig } from "remotion";
 // their mouth inside [talkFrom, talkTo] (seconds, local to the sequence).
 export type CharacterId = "nadia" | "theo";
 
-type Look = {
+export type Look = {
   skin: string;
   skinShade: string;
   hair: string;
@@ -40,10 +40,11 @@ export const Character: React.FC<{
   worry?: number; // 0..1 brow tilt
   night?: boolean;
   style?: React.CSSProperties;
-}> = ({ id, talkFrom = -1, talkTo = -1, worry = 0, night = false, style }) => {
+  look?: Partial<Look>; // outfit changes, e.g. Theo's new blue hoodie
+}> = ({ id, talkFrom = -1, talkTo = -1, worry = 0, night = false, style, look }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
-  const L = LOOKS[id];
+  const L = { ...LOOKS[id], ...look };
   const t = frame / fps;
   // blink: 0.1 s closed every ~3.4 s, offset per character
   const cycle = (t + L.blinkOffset) % 3.4;

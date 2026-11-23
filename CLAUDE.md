@@ -45,7 +45,10 @@ whitelightai. **No AI video generation, no morphing clips.**
 3. `scripts/sfx.py`: all sound synthesized in code (no samples). Beds: default, `horror`.
 4. Remotion (`src/`): `StoryVertical` reads the resolved JSON. Components are
    registered by name in `src/StoryVertical.tsx`. Register each episode in `src/Root.tsx`.
-5. Render, then `scripts/master.sh` (two-pass loudnorm to -14 LUFS, -1.5 dBTP).
+5. Render, then `scripts/master.sh` (two-pass loudnorm to -14 LUFS, -1.5 dBTP,
+   plus a 4x oversampled limiter). Verify with `ffmpeg -i X -af ebur128=peak=true -f null -`.
+   Masters made before 2026-11-23 (Citicorp P1, Seventh Room P1) peak at -0.9 dBTP,
+   above the ceiling, because the old script had no limiter.
 6. Review a contact sheet of stills for every beat. Fix overlaps, then re-render.
 7. Approved masters go in `renders/`. Drafts stay in `out/` (gitignored).
 
@@ -66,7 +69,7 @@ safe zone (top 170 px, bottom 420 px, right 140 px).
 |---|---|---|
 | Rosenhan "The Fake Patients" (real) | main | 11 s preview only, superseded |
 | Citicorp "The 59-Story Secret" (real) | story/citicorp-part1 | Part 1 done (44 s). Parts 2 to 4 scripted in `stories/citicorp/BIBLE.md` |
-| **"The Seventh Room" (original horror)** | story/seventh-room | Part 1 done (47 s). Parts 2 to 4 outlined in `stories/seventh-room/BIBLE.md` |
+| **"The Seventh Room" (original horror)** | story/seventh-room | Parts 1 (47 s) and 2 (49.5 s) done. Parts 3 and 4 outlined in `stories/seventh-room/BIBLE.md` |
 
 The Seventh Room cast: Nadia Reyes (architect, 31, af_heart, amber), Theo Reyes
 (brother, 19, am_puck, sky blue), the Occupant (never seen), Mrs. Albrecht
@@ -81,13 +84,16 @@ artemnovitckii/claude-animation-skills under `vendor/` and links its 11
 skills into `.claude/skills/` (/graph, /map-route, /kurzgesagt, /low-poly,
 /minecraft, /dan-koe, /minimalistic-graphics, /breakdown, /stick-figure,
 /zach-d-films, /zach-3d-films). Setup: `bash vendor/claude-animation-skills/kit/setup.sh`
-(add `--voice` for the two engines). Idea pending: a /low-poly shot of the
-house at night for Seventh Room Part 2.
+(add `--voice` for the two engines). The /low-poly idea for Part 2 was skipped: the skill renders through
+Playwright Chromium, which is not installed on the PC. Part 2 uses 2D beats in
+`src/beats/CameraBeats.tsx` (recap strip, inspection camera, phone feed, pencil plan, receipt proof).
 
 ## Next steps
 
 1. Get the user's feedback on Seventh Room Part 1 (look, voices, names).
-2. Build Seventh Room Parts 2 to 4, then the 16:9 YouTube master.
+2. Build Seventh Room Parts 3 and 4, then the 16:9 YouTube master.
+   Part 2 continuity: Theo now owns a blue hoodie (`look` prop on CharacterCard),
+   the pencil plan marks the gap as a red "7", a fictional store "Threadline Supply" sold the hoodie.
 3. Brand kit: bios, avatar, banner. Then rebrand the accounts via browser.
 4. Merge branches into main once the user approves.
 

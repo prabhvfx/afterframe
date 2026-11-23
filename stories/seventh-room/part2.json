@@ -1,0 +1,424 @@
+{
+  "id": "seventh-room-p2",
+  "title": "The Seventh Room",
+  "part": 2,
+  "totalParts": 4,
+  "format": "vertical",
+  "fps": 60,
+  "durationSeconds": "auto",
+  "bed": "horror",
+  "bedLevel": 0.26,
+  "captionHighlights": [
+    "ninety",
+    "knocks",
+    "hole",
+    "camera",
+    "room",
+    "chair",
+    "wall",
+    "desk",
+    "pencil",
+    "figures",
+    "blue",
+    "hoodie",
+    "after"
+  ],
+  "cast": {
+    "nadia": {
+      "voice": "af_heart",
+      "speed": 1.0,
+      "color": "#FFB46B"
+    },
+    "theo": {
+      "voice": "am_puck",
+      "speed": 1.05,
+      "color": "#8EC8FF"
+    }
+  },
+  "voice": {
+    "engine": "kokoro-82m-onnx",
+    "voice": "am_michael:0.6,am_onyx:0.4",
+    "speed": 1.08,
+    "lang": "en-us",
+    "file": "vo/seventh-room-p2.wav",
+    "leadIn": 0.25,
+    "tail": 2.0,
+    "lines": [
+      {
+        "text": "Ninety centimeters. Three knocks. A hole in the wall."
+      },
+      {
+        "text": "So Nadia bought an inspection camera. A tiny lens on a cable.",
+        "pauseBefore": 0.45
+      },
+      {
+        "text": "She fed it through the hole.",
+        "pauseBefore": 0.3
+      },
+      {
+        "text": "On her phone, a room appeared. Narrow. Dusty. No door.",
+        "pauseBefore": 0.5
+      },
+      {
+        "text": "A chair, facing the wall.",
+        "pauseBefore": 0.55
+      },
+      {
+        "text": "A desk.",
+        "pauseBefore": 0.5
+      },
+      {
+        "text": "And on the desk, a sheet of paper.",
+        "pauseBefore": 0.4
+      },
+      {
+        "text": "A floor plan. Of their house. In pencil.",
+        "pauseBefore": 0.5
+      },
+      {
+        "text": "Huh. Previous owner was an architect too, I guess.",
+        "speaker": "theo",
+        "pauseBefore": 0.45
+      },
+      {
+        "text": "Two small figures were drawn in the bedrooms.",
+        "pauseBefore": 0.4
+      },
+      {
+        "text": "Nadia zoomed in.",
+        "pauseBefore": 0.35
+      },
+      {
+        "text": "The one in Theo's room wore a blue hoodie.",
+        "pauseBefore": 0.5
+      },
+      {
+        "text": "Theo. When did you buy that hoodie?",
+        "speaker": "nadia",
+        "speed": 0.95,
+        "pauseBefore": 0.8
+      },
+      {
+        "text": "Yesterday. Why?",
+        "speaker": "theo",
+        "pauseBefore": 0.35
+      },
+      {
+        "text": "Someone drew that plan after they moved in.",
+        "speed": 0.98,
+        "pauseBefore": 0.9
+      },
+      {
+        "text": "Part three.",
+        "pauseBefore": 1.0
+      }
+    ]
+  },
+  "beats": [
+    {
+      "id": "recap",
+      "start": 0,
+      "end": "L1-0.15",
+      "component": "RecapStrip",
+      "props": {
+        "items": [
+          {
+            "at": "L0.w0",
+            "label": "0.90 M",
+            "sub": "NO DOOR",
+            "icon": "gap"
+          },
+          {
+            "at": "L0.w2",
+            "label": "3 KNOCKS",
+            "sub": "3:12 AM",
+            "icon": "knock"
+          },
+          {
+            "at": "L0.w4",
+            "label": "A HOLE",
+            "sub": "COLD AIR",
+            "icon": "hole"
+          }
+        ]
+      }
+    },
+    {
+      "id": "camera",
+      "start": "L1-0.15",
+      "end": "L2-0.15",
+      "component": "CameraKit",
+      "props": {
+        "lensAt": "L1.w6"
+      }
+    },
+    {
+      "id": "insert",
+      "start": "L2-0.15",
+      "end": "L3-0.1",
+      "component": "CableInsert",
+      "props": {
+        "pushAt": "L2.w1"
+      }
+    },
+    {
+      "id": "feed",
+      "start": "L3-0.1",
+      "end": "L7-0.15",
+      "component": "PhoneFeed",
+      "props": {
+        "roomAt": "L3.w4",
+        "chairAt": "L4.w1",
+        "deskAt": "L5.w1",
+        "paperAt": "L6.w5"
+      }
+    },
+    {
+      "id": "plan",
+      "start": "L7-0.15",
+      "end": "L8-0.2",
+      "component": "PencilPlan",
+      "props": {
+        "drawAt": "L7.w0",
+        "houseAt": "L7.w4"
+      }
+    },
+    {
+      "id": "theoLaugh",
+      "start": "L8-0.2",
+      "end": "L9-0.15",
+      "component": "CharacterCard",
+      "props": {
+        "who": "theo",
+        "name": "",
+        "role": "",
+        "side": "right",
+        "bubble": "Huh. Previous owner was an architect too, I guess.",
+        "talkFrom": "L8",
+        "talkTo": "L8.end"
+      }
+    },
+    {
+      "id": "figures",
+      "start": "L9-0.15",
+      "end": "L12-0.25",
+      "component": "PencilPlan",
+      "props": {
+        "figuresAt": "L9.w2",
+        "zoomAt": "L10.w1",
+        "hoodieAt": "L11.w7"
+      }
+    },
+    {
+      "id": "nadiaAsk",
+      "start": "L12-0.25",
+      "end": "L13-0.15",
+      "component": "CharacterCard",
+      "props": {
+        "who": "nadia",
+        "name": "",
+        "role": "",
+        "side": "left",
+        "bubble": "Theo. When did you buy that hoodie?",
+        "talkFrom": "L12",
+        "talkTo": "L12.end"
+      }
+    },
+    {
+      "id": "theoBlue",
+      "start": "L13-0.15",
+      "end": "L14-0.3",
+      "component": "CharacterCard",
+      "props": {
+        "who": "theo",
+        "name": "",
+        "role": "",
+        "side": "right",
+        "look": {
+          "top": "#3F6FB5",
+          "topShade": "#2E568F"
+        },
+        "bubble": "Yesterday. Why?",
+        "talkFrom": "L13",
+        "talkTo": "L13.end"
+      }
+    },
+    {
+      "id": "proof",
+      "start": "L14-0.3",
+      "end": "L15-0.3",
+      "component": "ReceiptProof",
+      "props": {
+        "receiptAt": "L14.w0",
+        "drawingAt": "L14.w1",
+        "stampAt": "L14.w4"
+      }
+    },
+    {
+      "id": "next",
+      "start": "L15-0.3",
+      "end": "END",
+      "component": "NextPart",
+      "noCaptions": true,
+      "props": {
+        "next": 3,
+        "line": "Who drew it?",
+        "cta": "FULL STORY ON YOUTUBE"
+      }
+    }
+  ],
+  "sfx": [
+    {
+      "type": "stamp",
+      "at": "L0.w0",
+      "gain": 0.6
+    },
+    {
+      "type": "knock",
+      "at": "L0.w2",
+      "gain": 0.7
+    },
+    {
+      "type": "knock",
+      "at": "L0.w2+0.18",
+      "gain": 0.7
+    },
+    {
+      "type": "knock",
+      "at": "L0.w2+0.36",
+      "gain": 0.7
+    },
+    {
+      "type": "stamp",
+      "at": "L0.w4",
+      "gain": 0.6
+    },
+    {
+      "type": "whoosh",
+      "at": "L1-0.4",
+      "gain": 0.5
+    },
+    {
+      "type": "click",
+      "at": "L1.w6",
+      "gain": 0.8
+    },
+    {
+      "type": "whoosh",
+      "at": "L2-0.4",
+      "gain": 0.4
+    },
+    {
+      "type": "scrape",
+      "at": "L2.w1",
+      "dur": 1.2,
+      "gain": 0.6
+    },
+    {
+      "type": "static",
+      "at": "L3-0.1",
+      "dur": 0.6,
+      "gain": 0.7
+    },
+    {
+      "type": "static",
+      "at": "L3.w4",
+      "dur": 9.0,
+      "gain": 0.14
+    },
+    {
+      "type": "tick",
+      "at": "L4.w1",
+      "gain": 0.6
+    },
+    {
+      "type": "tick",
+      "at": "L5.w1",
+      "gain": 0.6
+    },
+    {
+      "type": "creak",
+      "at": "L5.w1+0.4",
+      "gain": 0.35
+    },
+    {
+      "type": "tick",
+      "at": "L6.w5",
+      "gain": 0.6
+    },
+    {
+      "type": "paper",
+      "at": "L7-0.15",
+      "gain": 0.7
+    },
+    {
+      "type": "pencil",
+      "at": "L7.w0",
+      "dur": 2.2,
+      "gain": 0.6
+    },
+    {
+      "type": "whoosh",
+      "at": "L8-0.5",
+      "gain": 0.4
+    },
+    {
+      "type": "whoosh",
+      "at": "L9-0.5",
+      "gain": 0.4
+    },
+    {
+      "type": "pencil",
+      "at": "L9.w2",
+      "dur": 0.8,
+      "gain": 0.5
+    },
+    {
+      "type": "whoosh",
+      "at": "L10.w1-0.1",
+      "gain": 0.5
+    },
+    {
+      "type": "impact",
+      "at": "L11.w7",
+      "gain": 0.55
+    },
+    {
+      "type": "hiss",
+      "at": "L11.w7",
+      "dur": 1.4,
+      "gain": 0.4
+    },
+    {
+      "type": "whoosh",
+      "at": "L12-0.5",
+      "gain": 0.4
+    },
+    {
+      "type": "whoosh",
+      "at": "L13-0.45",
+      "gain": 0.4
+    },
+    {
+      "type": "paper",
+      "at": "L14-0.3",
+      "gain": 0.6
+    },
+    {
+      "type": "stamp",
+      "at": "L14.w4",
+      "gain": 0.9
+    },
+    {
+      "type": "riser",
+      "at": "L14.w4+0.2",
+      "dur": 1.6,
+      "gain": 0.7
+    },
+    {
+      "type": "stamp",
+      "at": "L15",
+      "gain": 0.8
+    }
+  ]
+}

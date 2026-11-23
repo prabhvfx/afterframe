@@ -159,6 +159,31 @@ def tape(dur=0.6):
     return out
 
 
+def static(dur=1.0):
+    """Camera feed static: band-limited noise with a 50 Hz flutter."""
+    n = int(dur * SR)
+    t = np.arange(n) / SR
+    x = highpass(lowpass(rng.standard_normal(n), 6000), 500) * (0.7 + 0.3 * np.sin(2 * np.pi * 50 * t))
+    return x * np.minimum(1, t * 20) * np.minimum(1, (dur - t) * 6) * 0.5
+
+
+def pencil(dur=1.0):
+    """Graphite on paper: bright noise in quick strokes."""
+    n = int(dur * SR)
+    t = np.arange(n) / SR
+    strokes = np.sin(2 * np.pi * 6.5 * t) ** 2 * (0.6 + 0.4 * np.sin(2 * np.pi * 1.3 * t))
+    x = highpass(rng.standard_normal(n), 3000) * strokes
+    return x * np.minimum(1, t * 30) * np.minimum(1, (dur - t) * 8) * 0.4
+
+
+def scrape(dur=1.0):
+    """Cable sliding through a hole in plaster."""
+    n = int(dur * SR)
+    t = np.arange(n) / SR
+    x = lowpass(rng.standard_normal(n), 1200) * (0.6 + 0.4 * np.sin(2 * np.pi * 4 * t))
+    return x * np.minimum(1, t * 10) * np.minimum(1, (dur - t) * 5) * 0.6
+
+
 def bed_horror(dur, level):
     """Two close low tones beating (41 vs 43.6 Hz), a thin high whine, breath noise."""
     n = int(dur * SR)
@@ -187,7 +212,8 @@ def bed(dur, level=0.22):
 
 GEN = {"impact": impact, "stamp": stamp, "whoosh": whoosh, "click": click,
        "paper": paper, "riser": riser, "creak": creak, "tick": tick, "wind": wind,
-       "knock": knock, "drill": drill, "hiss": hiss, "tape": tape}
+       "knock": knock, "drill": drill, "hiss": hiss, "tape": tape,
+       "static": static, "pencil": pencil, "scrape": scrape}
 
 
 def main():
