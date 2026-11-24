@@ -14,6 +14,7 @@ import { TowerHero, DocStamp, TowerStats, TowerBase, FootprintPlan } from "./bea
 import { ListingCount, CharacterCard, MeasureGap, KnockNight, DrillHole } from "./beats/HorrorBeats";
 import { RecapStrip, CameraKit, CableInsert, PhoneFeed, PencilPlan, ReceiptProof } from "./beats/CameraBeats";
 import { CallScreen, BrickUp, RecordsSearch, GapGrow, SleepThrough, EmptyBed, CarpetPull } from "./beats/NightBeats";
+import { TheoWall, SledgeWall, BreakThrough, WarmChair, PlanUpdate } from "./beats/FinaleBeats";
 import { TimelineScrubber, WindDiagram, CalcSheet, BigCounter, JointZoom, NextPart } from "./beats/EvidenceBeats";
 
 export type Beat = {
@@ -46,6 +47,7 @@ const REGISTRY: Record<string, React.FC<any>> = {
   ListingCount, CharacterCard, MeasureGap, KnockNight, DrillHole,
   RecapStrip, CameraKit, CableInsert, PhoneFeed, PencilPlan, ReceiptProof,
   CallScreen, BrickUp, RecordsSearch, GapGrow, SleepThrough, EmptyBed, CarpetPull,
+  TheoWall, SledgeWall, BreakThrough, WarmChair, PlanUpdate,
 };
 
 export const StoryVertical: React.FC<{ story: Story; sfxFile: string }> = ({ story, sfxFile }) => {

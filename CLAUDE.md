@@ -70,7 +70,7 @@ safe zone (top 170 px, bottom 420 px, right 140 px).
 |---|---|---|
 | Rosenhan "The Fake Patients" (real) | main | 11 s preview only, superseded |
 | Citicorp "The 59-Story Secret" (real) | story/citicorp-part1 | Part 1 done (44 s). Parts 2 to 4 scripted in `stories/citicorp/BIBLE.md` |
-| **"The Seventh Room" (original horror)** | story/seventh-room | Parts 1 (47 s), 2 (49.5 s) and 3 (54.4 s) done. Part 4 outlined in `stories/seventh-room/BIBLE.md` |
+| **"The Seventh Room" (original horror)** | story/seventh-room | All 4 parts done: 47 s, 49.5 s, 54.4 s, 54.9 s. Posting plan in `stories/seventh-room/POSTING.md` |
 
 The Seventh Room cast: Nadia Reyes (architect, 31, af_heart, amber), Theo Reyes
 (brother, 19, am_puck, sky blue), the Occupant (never seen), Mrs. Albrecht
@@ -92,13 +92,18 @@ Playwright Chromium, which is not installed on the PC. Part 2 uses 2D beats in
 ## Next steps
 
 1. Get the user's feedback on Seventh Room Part 1 (look, voices, names).
-2. Build Seventh Room Part 4, then the 16:9 YouTube master.
+2. Build the 16:9 YouTube master of The Seventh Room (all 4 parts done).
    Part 2 continuity: Theo now owns a blue hoodie (`look` prop on CharacterCard),
    the pencil plan marks the gap as a red "7", a fictional store "Threadline Supply" sold the hoodie.
    Part 3 continuity: Mrs. Albrecht is a character (`albrecht` in `Character.tsx`, grey bob, lilac
    cardigan, bf_emma, pronounced /ˈɑlbɹɛkt/). Rental records show 0 leases every decade. The gap
    read 0.91, 0.92, 0.93 m on nights 1 to 3. Theo vanished at 3:12, bed empty, carpet pulled toward
    the wall. Part 3 beats live in `src/beats/NightBeats.tsx`.
+   Part 4 continuity: Theo found asleep standing at the hallway wall, whispering "Almost done. It only
+   needs one more." Nadia hits the wall 3 times, it hits back 3 times, then gives way. Empty room, warm
+   chair. The plan now shows 7 rooms and 6 figures (2 people), and a red pencil line crawls from room 7
+   toward Nadia's room (BED 1) without reaching it. Beats in `src/beats/FinaleBeats.tsx`. NextPart takes
+   an optional `badge` (Part 4 uses "FULL STORY").
 3. Brand kit: bios, avatar, banner. Then rebrand the accounts via browser.
 4. Merge branches into main once the user approves.
 

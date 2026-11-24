@@ -6,6 +6,7 @@ import citicorpP1 from "../stories/citicorp/part1.resolved.json";
 import seventhP1 from "../stories/seventh-room/part1.resolved.json";
 import seventhP2 from "../stories/seventh-room/part2.resolved.json";
 import seventhP3 from "../stories/seventh-room/part3.resolved.json";
+import seventhP4 from "../stories/seventh-room/part4.resolved.json";
 
 // One entry per rendered episode: [composition id, resolved storyboard, sfx file]
 const VERTICAL: [string, Story, string][] = [
@@ -14,6 +15,7 @@ const VERTICAL: [string, Story, string][] = [
   ["SeventhRoomP1", seventhP1 as unknown as Story, "sfx/seventh-room-p1.wav"],
   ["SeventhRoomP2", seventhP2 as unknown as Story, "sfx/seventh-room-p2.wav"],
   ["SeventhRoomP3", seventhP3 as unknown as Story, "sfx/seventh-room-p3.wav"],
+  ["SeventhRoomP4", seventhP4 as unknown as Story, "sfx/seventh-room-p4.wav"],
 ];
 
 export const RemotionRoot: React.FC = () => (

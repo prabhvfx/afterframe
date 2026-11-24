@@ -1,0 +1,270 @@
+{
+  "id": "seventh-room-p4",
+  "title": "The Seventh Room",
+  "part": 4,
+  "totalParts": 4,
+  "format": "vertical",
+  "fps": 60,
+  "durationSeconds": "auto",
+  "bed": "horror",
+  "bedLevel": 0.26,
+  "captionHighlights": [
+    "grows",
+    "empty",
+    "carpet",
+    "wall",
+    "whispering",
+    "sledgehammer",
+    "three",
+    "back",
+    "warm",
+    "updated",
+    "seven",
+    "six",
+    "two",
+    "moving",
+    "nadias",
+    "youtube"
+  ],
+  "cast": {
+    "nadia": {
+      "voice": "af_heart",
+      "speed": 1.0,
+      "color": "#FFB46B"
+    },
+    "theo": {
+      "voice": "am_puck",
+      "speed": 1.05,
+      "color": "#8EC8FF"
+    }
+  },
+  "voice": {
+    "engine": "kokoro-82m-onnx",
+    "voice": "am_michael:0.6,am_onyx:0.4",
+    "speed": 1.08,
+    "lang": "en-us",
+    "file": "vo/seventh-room-p4.wav",
+    "leadIn": 0.25,
+    "tail": 2.0,
+    "lines": [
+      {
+        "text": "A gap that grows. Three knocks. An empty bed."
+      },
+      {
+        "text": "Nadia followed the carpet to the end of the hallway.",
+        "pauseBefore": 0.5
+      },
+      {
+        "text": "Theo was there. Asleep on his feet. His cheek pressed to the wall.",
+        "pauseBefore": 0.5
+      },
+      {
+        "text": "And he was whispering to it.",
+        "pauseBefore": 0.45
+      },
+      {
+        "text": "Almost done. It only needs one more.",
+        "speaker": "theo",
+        "speed": 0.85,
+        "gain": 0.75,
+        "pauseBefore": 0.6
+      },
+      {
+        "text": "Theo! Wake up!",
+        "speaker": "nadia",
+        "pauseBefore": 0.5
+      },
+      {
+        "text": "Nadia didn't wait for morning. She got a sledgehammer.",
+        "pauseBefore": 0.6
+      },
+      {
+        "text": "Three hits.",
+        "pauseBefore": 0.4
+      },
+      {
+        "text": "And from inside, three hits back.",
+        "pauseBefore": 1.4
+      },
+      {
+        "text": "Then the wall gave way.",
+        "pauseBefore": 1.4
+      },
+      {
+        "text": "The room was empty. The chair was still warm.",
+        "pauseBefore": 0.8
+      },
+      {
+        "text": "On the desk, the floor plan. Updated.",
+        "pauseBefore": 0.5
+      },
+      {
+        "text": "Seven rooms now.",
+        "pauseBefore": 0.45
+      },
+      {
+        "text": "Six people drawn inside. In a house with two.",
+        "pauseBefore": 0.45
+      },
+      {
+        "text": "And one pencil line, still moving.",
+        "pauseBefore": 0.5
+      },
+      {
+        "text": "Toward Nadia's room.",
+        "pauseBefore": 0.4
+      },
+      {
+        "text": "The full story is on YouTube.",
+        "pauseBefore": 1.0
+      }
+    ]
+  },
+  "beats": [
+    {
+      "id": "recap",
+      "start": 0,
+      "end": "L1-0.15",
+      "component": "RecapStrip",
+      "props": {
+        "items": [
+          { "at": "L0.w1", "label": "0.93 M", "sub": "+1 CM EVERY NIGHT", "icon": "gap" },
+          { "at": "L0.w4", "label": "3:12", "sub": "THREE KNOCKS", "icon": "knock" },
+          { "at": "L0.w7", "label": "EMPTY", "sub": "THEO'S BED", "icon": "bed" }
+        ]
+      }
+    },
+    {
+      "id": "hall",
+      "start": "L1-0.15",
+      "end": "L2-0.15",
+      "component": "CarpetPull",
+      "props": {
+        "pullAt": "L1.w3",
+        "wallAt": "L1.w9"
+      }
+    },
+    {
+      "id": "theoWall",
+      "start": "L2-0.15",
+      "end": "L5-0.15",
+      "component": "TheoWall",
+      "props": {
+        "asleepAt": "L2.w4",
+        "zoomAt": "L3",
+        "quote": "Almost done. It only needs one more.",
+        "quoteFrom": "L4",
+        "quoteTo": "L4.end"
+      }
+    },
+    {
+      "id": "nadiaWake",
+      "start": "L5-0.15",
+      "end": "L6-0.15",
+      "component": "CharacterCard",
+      "props": {
+        "who": "nadia",
+        "name": "",
+        "role": "",
+        "side": "left",
+        "bubble": "Theo! Wake up!",
+        "talkFrom": "L5",
+        "talkTo": "L5.end"
+      }
+    },
+    {
+      "id": "sledge",
+      "start": "L6-0.15",
+      "end": "L9-0.15",
+      "component": "SledgeWall",
+      "props": {
+        "toolAt": "L6.w7",
+        "hits": ["L7.end+0.15", "L7.end+0.55", "L7.end+0.95"],
+        "backs": ["L8.end+0.15", "L8.end+0.55", "L8.end+0.95"]
+      }
+    },
+    {
+      "id": "break",
+      "start": "L9-0.15",
+      "end": "L10-0.15",
+      "component": "BreakThrough",
+      "props": {
+        "breakAt": "L9.w4"
+      }
+    },
+    {
+      "id": "room",
+      "start": "L10-0.15",
+      "end": "L11-0.15",
+      "component": "WarmChair",
+      "props": {
+        "emptyAt": "L10.w3",
+        "warmAt": "L10.w8"
+      }
+    },
+    {
+      "id": "plan",
+      "start": "L11-0.15",
+      "end": "L16-0.3",
+      "component": "PlanUpdate",
+      "props": {
+        "updatedAt": "L11.w6",
+        "seventhAt": "L12.w0",
+        "figuresAt": "L13.w0",
+        "countAt": "L13.w8",
+        "lineAt": "L14.w3",
+        "nadiaAt": "L15.w1"
+      }
+    },
+    {
+      "id": "end",
+      "start": "L16-0.3",
+      "end": "END",
+      "component": "NextPart",
+      "noCaptions": true,
+      "props": {
+        "next": 0,
+        "badge": "FULL STORY",
+        "line": "The Seventh Room",
+        "cta": "ON YOUTUBE · @AFTERFRAME.ANIMATED"
+      }
+    }
+  ],
+  "sfx": [
+    { "type": "whoosh", "at": 0.05, "gain": 0.5 },
+    { "type": "impact", "at": "L0.w1", "gain": 0.35 },
+    { "type": "knock", "at": "L0.w4", "gain": 0.6 },
+    { "type": "impact", "at": "L0.w7", "gain": 0.45 },
+    { "type": "whoosh", "at": "L1-0.45", "gain": 0.4 },
+    { "type": "scrape", "at": "L1.w3", "dur": 1.0, "gain": 0.6 },
+    { "type": "whoosh", "at": "L2-0.45", "gain": 0.4 },
+    { "type": "wind", "at": "L2", "dur": 3.0, "gain": 0.35 },
+    { "type": "hiss", "at": "L3", "dur": 1.2, "gain": 0.3 },
+    { "type": "whoosh", "at": "L5-0.45", "gain": 0.45 },
+    { "type": "whoosh", "at": "L6-0.45", "gain": 0.4 },
+    { "type": "click", "at": "L6.w7", "gain": 0.8 },
+    { "type": "impact", "at": "L7.end+0.15", "gain": 0.9 },
+    { "type": "brick", "at": "L7.end+0.15", "gain": 0.6 },
+    { "type": "impact", "at": "L7.end+0.55", "gain": 0.9 },
+    { "type": "brick", "at": "L7.end+0.55", "gain": 0.6 },
+    { "type": "impact", "at": "L7.end+0.95", "gain": 0.9 },
+    { "type": "brick", "at": "L7.end+0.95", "gain": 0.6 },
+    { "type": "knock", "at": "L8.end+0.15", "gain": 1.0 },
+    { "type": "knock", "at": "L8.end+0.55", "gain": 1.0 },
+    { "type": "knock", "at": "L8.end+0.95", "gain": 1.0 },
+    { "type": "impact", "at": "L9.w4", "gain": 1.0 },
+    { "type": "scrape", "at": "L9.w4", "dur": 1.2, "gain": 0.8 },
+    { "type": "wind", "at": "L9.w4+0.3", "dur": 2.0, "gain": 0.4 },
+    { "type": "creak", "at": "L10.w1", "gain": 0.5 },
+    { "type": "hiss", "at": "L10.w8", "dur": 1.0, "gain": 0.4 },
+    { "type": "paper", "at": "L11-0.1", "gain": 0.7 },
+    { "type": "stamp", "at": "L11.w6", "gain": 0.6 },
+    { "type": "pencil", "at": "L12.w0", "dur": 0.8, "gain": 0.5 },
+    { "type": "pencil", "at": "L13.w0", "dur": 1.2, "gain": 0.5 },
+    { "type": "impact", "at": "L13.w8", "gain": 0.5 },
+    { "type": "pencil", "at": "L14.w3", "dur": 3.5, "gain": 0.55 },
+    { "type": "riser", "at": "L14.w3", "dur": 2.6, "gain": 0.7 },
+    { "type": "impact", "at": "L15.w1", "gain": 0.8 },
+    { "type": "stamp", "at": "L16", "gain": 0.8 }
+  ]
+}

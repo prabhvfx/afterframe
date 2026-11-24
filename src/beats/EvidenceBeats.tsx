@@ -231,7 +231,7 @@ export const JointZoom: React.FC<Beat & { revealAt: number }> = ({ revealAt, bea
 };
 
 // 11 ─ Series end card: next part, teaser line, CTA.
-export const NextPart: React.FC<Beat & { next: number; line: string; cta: string }> = ({ next, line, cta }) => {
+export const NextPart: React.FC<Beat & { next: number; line: string; cta: string; badge?: string }> = ({ next, line, cta, badge }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
   const p = sp(frame, fps, 0, SPRINGS.slam);
@@ -240,10 +240,10 @@ export const NextPart: React.FC<Beat & { next: number; line: string; cta: string
   const arrow = (frame / fps) % 0.8;
   return (
     <AbsoluteFill style={{ background: T.bg, justifyContent: "center", alignItems: "center", paddingBottom: 420 }}>
-      <div style={{ background: T.red, color: "#fff", fontFamily: T.display, fontWeight: 900, fontSize: 170, letterSpacing: -4,
+      <div style={{ background: T.red, color: "#fff", fontFamily: T.display, fontWeight: 900, fontSize: badge ? 120 : 170, letterSpacing: -4,
         padding: "10px 50px", borderRadius: 26, scale: String(interpolate(p, [0, 1], [2.2, 1])), opacity: Math.min(1, p * 2),
         rotate: `${interpolate(p, [0, 1], [-6, -2])}deg` }}>
-        PART {next}
+        {badge ?? `PART ${next}`}
       </div>
       <div style={{ marginTop: 50, fontFamily: T.display, fontWeight: 900, fontSize: 96, color: T.text, letterSpacing: -2 }}>
         {line.slice(0, chars)}<span style={{ opacity: 0 }}>{line.slice(chars)}</span>

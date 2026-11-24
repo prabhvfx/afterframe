@@ -8,12 +8,12 @@ import { BlueGrid, DAY } from "./HorrorBeats";
 // Seventh Room Part 2 beats: recap, inspection camera, the feed, the pencil plan.
 type Beat = { beatStart: number; dur: number };
 
-const PENCIL = "#55534F";
+export const PENCIL = "#55534F";
 const HOODIE = "#3F6FB5";
 const ease = { ...clamp, easing: Easing.bezier(0.45, 0, 0.2, 1) };
 
 // 1 ─ Recap: three cards slam in, one per fact from Part 1.
-type RecapItem = { at: number; label: string; sub: string; icon: "gap" | "knock" | "hole" };
+type RecapItem = { at: number; label: string; sub: string; icon: "gap" | "knock" | "hole" | "bed" };
 const RecapIcon: React.FC<{ icon: RecapItem["icon"] }> = ({ icon }) => (
   <svg width={150} height={150} viewBox="0 0 150 150">
     {icon === "gap" && (
@@ -30,6 +30,13 @@ const RecapIcon: React.FC<{ icon: RecapItem["icon"] }> = ({ icon }) => (
       <>
         <rect x={10} y={10} width={130} height={130} rx={14} fill="#BDB3A3" />
         <circle cx={75} cy={75} r={30} fill="#000" stroke="#9C9182" strokeWidth={7} />
+      </>
+    )}
+    {icon === "bed" && (
+      <>
+        <rect x={14} y={40} width={22} height={80} rx={6} fill={T.text} />
+        <rect x={36} y={78} width={100} height={30} rx={8} fill={T.text} />
+        <rect x={44} y={62} width={36} height={18} rx={8} fill={T.red} />
       </>
     )}
   </svg>
@@ -261,13 +268,13 @@ export const PhoneFeed: React.FC<Beat & { roomAt: number; chairAt: number; deskA
 };
 
 // The house as drawn by the Occupant. Plan units 900 x 900. [x, y, w, h, label]
-const ROOMS: [number, number, number, number, string][] = [
+export const ROOMS: [number, number, number, number, string][] = [
   [0, 0, 500, 330, "LIVING"], [500, 0, 400, 330, "KITCHEN"], [0, 330, 740, 120, "HALL"],
   [0, 450, 330, 450, "BED 1"], [330, 450, 310, 450, "BED 2"], [640, 450, 260, 230, "BATH"], [640, 680, 260, 220, "LAUNDRY"],
 ];
 const THEO = { x: 485, y: 690 };
 
-const Figure: React.FC<{ x: number; y: number; p: number; hoodie?: boolean }> = ({ x, y, p, hoodie }) => (
+export const Figure: React.FC<{ x: number; y: number; p: number; hoodie?: boolean }> = ({ x, y, p, hoodie }) => (
   <g transform={`translate(${x} ${y})`} stroke={PENCIL} strokeWidth={5} fill="none" strokeLinecap="round">
     {hoodie && (
       <g opacity={p}>

@@ -1,0 +1,1076 @@
+{
+  "id": "seventh-room-p4",
+  "title": "The Seventh Room",
+  "part": 4,
+  "totalParts": 4,
+  "format": "vertical",
+  "fps": 60,
+  "durationSeconds": 54.84,
+  "bed": "horror",
+  "bedLevel": 0.26,
+  "captionHighlights": [
+    "grows",
+    "empty",
+    "carpet",
+    "wall",
+    "whispering",
+    "sledgehammer",
+    "three",
+    "back",
+    "warm",
+    "updated",
+    "seven",
+    "six",
+    "two",
+    "moving",
+    "nadias",
+    "youtube"
+  ],
+  "cast": {
+    "nadia": {
+      "voice": "af_heart",
+      "speed": 1.0,
+      "color": "#FFB46B"
+    },
+    "theo": {
+      "voice": "am_puck",
+      "speed": 1.05,
+      "color": "#8EC8FF"
+    }
+  },
+  "voice": {
+    "engine": "kokoro-82m-onnx",
+    "voice": "am_michael:0.6,am_onyx:0.4",
+    "speed": 1.08,
+    "lang": "en-us",
+    "file": "vo/seventh-room-p4.wav",
+    "leadIn": 0.25,
+    "tail": 2.0,
+    "lines": [
+      {
+        "text": "A gap that grows. Three knocks. An empty bed.",
+        "start": 0.37,
+        "dur": 3.125,
+        "words": [
+          {
+            "text": "A",
+            "start": 0.4,
+            "end": 0.45
+          },
+          {
+            "text": "gap",
+            "start": 0.5,
+            "end": 0.725
+          },
+          {
+            "text": "that",
+            "start": 0.75,
+            "end": 0.85
+          },
+          {
+            "text": "grows.",
+            "start": 0.9,
+            "end": 1.325
+          },
+          {
+            "text": "Three",
+            "start": 1.425,
+            "end": 1.65
+          },
+          {
+            "text": "knocks.",
+            "start": 1.7,
+            "end": 2.2
+          },
+          {
+            "text": "An",
+            "start": 2.3,
+            "end": 2.35
+          },
+          {
+            "text": "empty",
+            "start": 2.4,
+            "end": 2.65
+          },
+          {
+            "text": "bed.",
+            "start": 2.7,
+            "end": 3.375
+          }
+        ]
+      },
+      {
+        "text": "Nadia followed the carpet to the end of the hallway.",
+        "pauseBefore": 0.5,
+        "start": 3.995,
+        "dur": 3.175,
+        "words": [
+          {
+            "text": "Nadia",
+            "start": 4.025,
+            "end": 4.367
+          },
+          {
+            "text": "followed",
+            "start": 4.367,
+            "end": 4.881
+          },
+          {
+            "text": "the",
+            "start": 4.881,
+            "end": 5.109
+          },
+          {
+            "text": "carpet",
+            "start": 5.109,
+            "end": 5.509
+          },
+          {
+            "text": "to",
+            "start": 5.509,
+            "end": 5.68
+          },
+          {
+            "text": "the",
+            "start": 5.68,
+            "end": 5.908
+          },
+          {
+            "text": "end",
+            "start": 5.908,
+            "end": 6.137
+          },
+          {
+            "text": "of",
+            "start": 6.137,
+            "end": 6.308
+          },
+          {
+            "text": "the",
+            "start": 6.308,
+            "end": 6.536
+          },
+          {
+            "text": "hallway.",
+            "start": 6.536,
+            "end": 7.05
+          }
+        ]
+      },
+      {
+        "text": "Theo was there. Asleep on his feet. His cheek pressed to the wall.",
+        "pauseBefore": 0.5,
+        "start": 7.67,
+        "dur": 4.15,
+        "words": [
+          {
+            "text": "Theo",
+            "start": 7.7,
+            "end": 8.0
+          },
+          {
+            "text": "was",
+            "start": 8.05,
+            "end": 8.175
+          },
+          {
+            "text": "there.",
+            "start": 8.225,
+            "end": 8.475
+          },
+          {
+            "text": "Asleep",
+            "start": 8.55,
+            "end": 8.9
+          },
+          {
+            "text": "on",
+            "start": 8.925,
+            "end": 9.025
+          },
+          {
+            "text": "his",
+            "start": 9.05,
+            "end": 9.175
+          },
+          {
+            "text": "feet.",
+            "start": 9.25,
+            "end": 9.75
+          },
+          {
+            "text": "His",
+            "start": 9.875,
+            "end": 10.025
+          },
+          {
+            "text": "cheek",
+            "start": 10.1,
+            "end": 10.375
+          },
+          {
+            "text": "pressed",
+            "start": 10.425,
+            "end": 10.675
+          },
+          {
+            "text": "to",
+            "start": 10.725,
+            "end": 10.775
+          },
+          {
+            "text": "the",
+            "start": 10.8,
+            "end": 10.875
+          },
+          {
+            "text": "wall.",
+            "start": 10.95,
+            "end": 11.7
+          }
+        ]
+      },
+      {
+        "text": "And he was whispering to it.",
+        "pauseBefore": 0.45,
+        "start": 12.27,
+        "dur": 1.775,
+        "words": [
+          {
+            "text": "And",
+            "start": 12.3,
+            "end": 12.375
+          },
+          {
+            "text": "he",
+            "start": 12.4,
+            "end": 12.475
+          },
+          {
+            "text": "was",
+            "start": 12.5,
+            "end": 12.625
+          },
+          {
+            "text": "whispering",
+            "start": 12.7,
+            "end": 13.175
+          },
+          {
+            "text": "to",
+            "start": 13.25,
+            "end": 13.4
+          },
+          {
+            "text": "it.",
+            "start": 13.475,
+            "end": 13.925
+          }
+        ]
+      },
+      {
+        "text": "Almost done. It only needs one more.",
+        "speaker": "theo",
+        "speed": 0.85,
+        "gain": 0.75,
+        "pauseBefore": 0.6,
+        "start": 14.645,
+        "dur": 2.725,
+        "words": [
+          {
+            "text": "Almost",
+            "start": 14.675,
+            "end": 15.05
+          },
+          {
+            "text": "done.",
+            "start": 15.1,
+            "end": 15.4
+          },
+          {
+            "text": "It",
+            "start": 15.5,
+            "end": 15.6
+          },
+          {
+            "text": "only",
+            "start": 15.65,
+            "end": 15.9
+          },
+          {
+            "text": "needs",
+            "start": 15.95,
+            "end": 16.15
+          },
+          {
+            "text": "one",
+            "start": 16.2,
+            "end": 16.35
+          },
+          {
+            "text": "more.",
+            "start": 16.4,
+            "end": 17.25
+          }
+        ]
+      },
+      {
+        "text": "Theo! Wake up!",
+        "speaker": "nadia",
+        "pauseBefore": 0.5,
+        "start": 17.87,
+        "dur": 1.275,
+        "words": [
+          {
+            "text": "Theo!",
+            "start": 17.9,
+            "end": 18.25
+          },
+          {
+            "text": "Wake",
+            "start": 18.325,
+            "end": 18.525
+          },
+          {
+            "text": "up!",
+            "start": 18.575,
+            "end": 19.025
+          }
+        ]
+      },
+      {
+        "text": "Nadia didn't wait for morning. She got a sledgehammer.",
+        "pauseBefore": 0.6,
+        "start": 19.745,
+        "dur": 3.525,
+        "words": [
+          {
+            "text": "Nadia",
+            "start": 19.775,
+            "end": 20.15
+          },
+          {
+            "text": "didn't",
+            "start": 20.2,
+            "end": 20.4
+          },
+          {
+            "text": "wait",
+            "start": 20.45,
+            "end": 20.675
+          },
+          {
+            "text": "for",
+            "start": 20.725,
+            "end": 20.825
+          },
+          {
+            "text": "morning.",
+            "start": 20.875,
+            "end": 21.425
+          },
+          {
+            "text": "She",
+            "start": 21.575,
+            "end": 21.65
+          },
+          {
+            "text": "got",
+            "start": 21.7,
+            "end": 21.85
+          },
+          {
+            "text": "a",
+            "start": 21.875,
+            "end": 21.925
+          },
+          {
+            "text": "sledgehammer.",
+            "start": 22.025,
+            "end": 23.15
+          }
+        ]
+      },
+      {
+        "text": "Three hits.",
+        "pauseBefore": 0.4,
+        "start": 23.67,
+        "dur": 1.1,
+        "words": [
+          {
+            "text": "Three",
+            "start": 23.7,
+            "end": 24.0
+          },
+          {
+            "text": "hits.",
+            "start": 24.05,
+            "end": 24.65
+          }
+        ]
+      },
+      {
+        "text": "And from inside, three hits back.",
+        "pauseBefore": 1.4,
+        "start": 26.17,
+        "dur": 2.25,
+        "words": [
+          {
+            "text": "And",
+            "start": 26.2,
+            "end": 26.275
+          },
+          {
+            "text": "from",
+            "start": 26.325,
+            "end": 26.425
+          },
+          {
+            "text": "inside,",
+            "start": 26.475,
+            "end": 27.05
+          },
+          {
+            "text": "three",
+            "start": 27.15,
+            "end": 27.325
+          },
+          {
+            "text": "hits",
+            "start": 27.375,
+            "end": 27.6
+          },
+          {
+            "text": "back.",
+            "start": 27.65,
+            "end": 28.3
+          }
+        ]
+      },
+      {
+        "text": "Then the wall gave way.",
+        "pauseBefore": 1.4,
+        "start": 29.82,
+        "dur": 1.875,
+        "words": [
+          {
+            "text": "Then",
+            "start": 29.85,
+            "end": 30.05
+          },
+          {
+            "text": "the",
+            "start": 30.1,
+            "end": 30.175
+          },
+          {
+            "text": "wall",
+            "start": 30.25,
+            "end": 30.55
+          },
+          {
+            "text": "gave",
+            "start": 30.6,
+            "end": 30.85
+          },
+          {
+            "text": "way.",
+            "start": 30.9,
+            "end": 31.575
+          }
+        ]
+      },
+      {
+        "text": "The room was empty. The chair was still warm.",
+        "pauseBefore": 0.8,
+        "start": 32.495,
+        "dur": 3.05,
+        "words": [
+          {
+            "text": "The",
+            "start": 32.525,
+            "end": 32.6
+          },
+          {
+            "text": "room",
+            "start": 32.65,
+            "end": 32.875
+          },
+          {
+            "text": "was",
+            "start": 32.9,
+            "end": 33.025
+          },
+          {
+            "text": "empty.",
+            "start": 33.1,
+            "end": 33.575
+          },
+          {
+            "text": "The",
+            "start": 33.7,
+            "end": 33.775
+          },
+          {
+            "text": "chair",
+            "start": 33.85,
+            "end": 34.15
+          },
+          {
+            "text": "was",
+            "start": 34.2,
+            "end": 34.275
+          },
+          {
+            "text": "still",
+            "start": 34.325,
+            "end": 34.575
+          },
+          {
+            "text": "warm.",
+            "start": 34.65,
+            "end": 35.425
+          }
+        ]
+      },
+      {
+        "text": "On the desk, the floor plan. Updated.",
+        "pauseBefore": 0.5,
+        "start": 36.045,
+        "dur": 2.575,
+        "words": [
+          {
+            "text": "On",
+            "start": 36.075,
+            "end": 36.266
+          },
+          {
+            "text": "the",
+            "start": 36.266,
+            "end": 36.521
+          },
+          {
+            "text": "desk,",
+            "start": 36.521,
+            "end": 36.904
+          },
+          {
+            "text": "the",
+            "start": 36.904,
+            "end": 37.16
+          },
+          {
+            "text": "floor",
+            "start": 37.16,
+            "end": 37.542
+          },
+          {
+            "text": "plan.",
+            "start": 37.542,
+            "end": 37.925
+          },
+          {
+            "text": "Updated.",
+            "start": 37.925,
+            "end": 38.5
+          }
+        ]
+      },
+      {
+        "text": "Seven rooms now.",
+        "pauseBefore": 0.45,
+        "start": 39.07,
+        "dur": 1.6,
+        "words": [
+          {
+            "text": "Seven",
+            "start": 39.1,
+            "end": 39.425
+          },
+          {
+            "text": "rooms",
+            "start": 39.5,
+            "end": 39.825
+          },
+          {
+            "text": "now.",
+            "start": 39.875,
+            "end": 40.55
+          }
+        ]
+      },
+      {
+        "text": "Six people drawn inside. In a house with two.",
+        "pauseBefore": 0.45,
+        "start": 41.12,
+        "dur": 3.35,
+        "words": [
+          {
+            "text": "Six",
+            "start": 41.15,
+            "end": 41.375
+          },
+          {
+            "text": "people",
+            "start": 41.425,
+            "end": 41.75
+          },
+          {
+            "text": "drawn",
+            "start": 41.8,
+            "end": 42.075
+          },
+          {
+            "text": "inside.",
+            "start": 42.125,
+            "end": 42.85
+          },
+          {
+            "text": "In",
+            "start": 42.975,
+            "end": 43.025
+          },
+          {
+            "text": "a",
+            "start": 43.05,
+            "end": 43.075
+          },
+          {
+            "text": "house",
+            "start": 43.125,
+            "end": 43.425
+          },
+          {
+            "text": "with",
+            "start": 43.475,
+            "end": 43.6
+          },
+          {
+            "text": "two.",
+            "start": 43.675,
+            "end": 44.35
+          }
+        ]
+      },
+      {
+        "text": "And one pencil line, still moving.",
+        "pauseBefore": 0.5,
+        "start": 44.97,
+        "dur": 2.4,
+        "words": [
+          {
+            "text": "And",
+            "start": 45.0,
+            "end": 45.075
+          },
+          {
+            "text": "one",
+            "start": 45.125,
+            "end": 45.325
+          },
+          {
+            "text": "pencil",
+            "start": 45.375,
+            "end": 45.725
+          },
+          {
+            "text": "line,",
+            "start": 45.775,
+            "end": 46.15
+          },
+          {
+            "text": "still",
+            "start": 46.225,
+            "end": 46.45
+          },
+          {
+            "text": "moving.",
+            "start": 46.5,
+            "end": 47.25
+          }
+        ]
+      },
+      {
+        "text": "Toward Nadia's room.",
+        "pauseBefore": 0.4,
+        "start": 47.77,
+        "dur": 1.825,
+        "words": [
+          {
+            "text": "Toward",
+            "start": 47.8,
+            "end": 48.2
+          },
+          {
+            "text": "Nadia's",
+            "start": 48.275,
+            "end": 48.725
+          },
+          {
+            "text": "room.",
+            "start": 48.8,
+            "end": 49.475
+          }
+        ]
+      },
+      {
+        "text": "The full story is on YouTube.",
+        "pauseBefore": 1.0,
+        "start": 50.595,
+        "dur": 2.25,
+        "words": [
+          {
+            "text": "The",
+            "start": 50.625,
+            "end": 50.905
+          },
+          {
+            "text": "full",
+            "start": 50.905,
+            "end": 51.255
+          },
+          {
+            "text": "story",
+            "start": 51.255,
+            "end": 51.674
+          },
+          {
+            "text": "is",
+            "start": 51.674,
+            "end": 51.885
+          },
+          {
+            "text": "on",
+            "start": 51.885,
+            "end": 52.095
+          },
+          {
+            "text": "YouTube.",
+            "start": 52.095,
+            "end": 52.725
+          }
+        ]
+      }
+    ]
+  },
+  "beats": [
+    {
+      "id": "recap",
+      "start": 0,
+      "end": 3.845,
+      "component": "RecapStrip",
+      "props": {
+        "items": [
+          {
+            "at": 0.5,
+            "label": "0.93 M",
+            "sub": "+1 CM EVERY NIGHT",
+            "icon": "gap"
+          },
+          {
+            "at": 1.425,
+            "label": "3:12",
+            "sub": "THREE KNOCKS",
+            "icon": "knock"
+          },
+          {
+            "at": 2.4,
+            "label": "EMPTY",
+            "sub": "THEO'S BED",
+            "icon": "bed"
+          }
+        ]
+      }
+    },
+    {
+      "id": "hall",
+      "start": 3.845,
+      "end": 7.52,
+      "component": "CarpetPull",
+      "props": {
+        "pullAt": 5.109,
+        "wallAt": 6.536
+      }
+    },
+    {
+      "id": "theoWall",
+      "start": 7.52,
+      "end": 17.72,
+      "component": "TheoWall",
+      "props": {
+        "asleepAt": 8.925,
+        "zoomAt": 12.27,
+        "quote": "Almost done. It only needs one more.",
+        "quoteFrom": 14.645,
+        "quoteTo": 17.37
+      }
+    },
+    {
+      "id": "nadiaWake",
+      "start": 17.72,
+      "end": 19.595,
+      "component": "CharacterCard",
+      "props": {
+        "who": "nadia",
+        "name": "",
+        "role": "",
+        "side": "left",
+        "bubble": "Theo! Wake up!",
+        "talkFrom": 17.87,
+        "talkTo": 19.145
+      }
+    },
+    {
+      "id": "sledge",
+      "start": 19.595,
+      "end": 29.67,
+      "component": "SledgeWall",
+      "props": {
+        "toolAt": 21.875,
+        "hits": [
+          24.92,
+          25.32,
+          25.72
+        ],
+        "backs": [
+          28.57,
+          28.97,
+          29.37
+        ]
+      }
+    },
+    {
+      "id": "break",
+      "start": 29.67,
+      "end": 32.345,
+      "component": "BreakThrough",
+      "props": {
+        "breakAt": 30.9
+      }
+    },
+    {
+      "id": "room",
+      "start": 32.345,
+      "end": 35.895,
+      "component": "WarmChair",
+      "props": {
+        "emptyAt": 33.1,
+        "warmAt": 34.65
+      }
+    },
+    {
+      "id": "plan",
+      "start": 35.895,
+      "end": 50.295,
+      "component": "PlanUpdate",
+      "props": {
+        "updatedAt": 37.925,
+        "seventhAt": 39.1,
+        "figuresAt": 41.15,
+        "countAt": 43.675,
+        "lineAt": 45.775,
+        "nadiaAt": 48.275
+      }
+    },
+    {
+      "id": "end",
+      "start": 50.295,
+      "end": 54.84,
+      "component": "NextPart",
+      "noCaptions": true,
+      "props": {
+        "next": 0,
+        "badge": "FULL STORY",
+        "line": "The Seventh Room",
+        "cta": "ON YOUTUBE · @AFTERFRAME.ANIMATED"
+      }
+    }
+  ],
+  "sfx": [
+    {
+      "type": "whoosh",
+      "at": 0.05,
+      "gain": 0.5
+    },
+    {
+      "type": "impact",
+      "at": 0.5,
+      "gain": 0.35
+    },
+    {
+      "type": "knock",
+      "at": 1.425,
+      "gain": 0.6
+    },
+    {
+      "type": "impact",
+      "at": 2.4,
+      "gain": 0.45
+    },
+    {
+      "type": "whoosh",
+      "at": 3.545,
+      "gain": 0.4
+    },
+    {
+      "type": "scrape",
+      "at": 5.109,
+      "dur": 1.0,
+      "gain": 0.6
+    },
+    {
+      "type": "whoosh",
+      "at": 7.22,
+      "gain": 0.4
+    },
+    {
+      "type": "wind",
+      "at": 7.67,
+      "dur": 3.0,
+      "gain": 0.35
+    },
+    {
+      "type": "hiss",
+      "at": 12.27,
+      "dur": 1.2,
+      "gain": 0.3
+    },
+    {
+      "type": "whoosh",
+      "at": 17.42,
+      "gain": 0.45
+    },
+    {
+      "type": "whoosh",
+      "at": 19.295,
+      "gain": 0.4
+    },
+    {
+      "type": "click",
+      "at": 21.875,
+      "gain": 0.8
+    },
+    {
+      "type": "impact",
+      "at": 24.92,
+      "gain": 0.9
+    },
+    {
+      "type": "brick",
+      "at": 24.92,
+      "gain": 0.6
+    },
+    {
+      "type": "impact",
+      "at": 25.32,
+      "gain": 0.9
+    },
+    {
+      "type": "brick",
+      "at": 25.32,
+      "gain": 0.6
+    },
+    {
+      "type": "impact",
+      "at": 25.72,
+      "gain": 0.9
+    },
+    {
+      "type": "brick",
+      "at": 25.72,
+      "gain": 0.6
+    },
+    {
+      "type": "knock",
+      "at": 28.57,
+      "gain": 1.0
+    },
+    {
+      "type": "knock",
+      "at": 28.97,
+      "gain": 1.0
+    },
+    {
+      "type": "knock",
+      "at": 29.37,
+      "gain": 1.0
+    },
+    {
+      "type": "impact",
+      "at": 30.9,
+      "gain": 1.0
+    },
+    {
+      "type": "scrape",
+      "at": 30.9,
+      "dur": 1.2,
+      "gain": 0.8
+    },
+    {
+      "type": "wind",
+      "at": 31.2,
+      "dur": 2.0,
+      "gain": 0.4
+    },
+    {
+      "type": "creak",
+      "at": 32.65,
+      "gain": 0.5
+    },
+    {
+      "type": "hiss",
+      "at": 34.65,
+      "dur": 1.0,
+      "gain": 0.4
+    },
+    {
+      "type": "paper",
+      "at": 35.945,
+      "gain": 0.7
+    },
+    {
+      "type": "stamp",
+      "at": 37.925,
+      "gain": 0.6
+    },
+    {
+      "type": "pencil",
+      "at": 39.1,
+      "dur": 0.8,
+      "gain": 0.5
+    },
+    {
+      "type": "pencil",
+      "at": 41.15,
+      "dur": 1.2,
+      "gain": 0.5
+    },
+    {
+      "type": "impact",
+      "at": 43.675,
+      "gain": 0.5
+    },
+    {
+      "type": "pencil",
+      "at": 45.775,
+      "dur": 3.5,
+      "gain": 0.55
+    },
+    {
+      "type": "riser",
+      "at": 45.775,
+      "dur": 2.6,
+      "gain": 0.7
+    },
+    {
+      "type": "impact",
+      "at": 48.275,
+      "gain": 0.8
+    },
+    {
+      "type": "stamp",
+      "at": 50.595,
+      "gain": 0.8
+    }
+  ]
+}
